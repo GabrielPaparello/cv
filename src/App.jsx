@@ -1,35 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
-function App() {
-  const [count, setCount] = useState(0)
-
+import { Nav } from "./components/Nav";
+import { Header } from "./sections/Header";
+import { Projects } from "./sections/Projects";
+export const App = () => {
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Nav />
+      <Header />
+      <h2 className="text-3xl text-center my-10 ">Projects</h2>
+      <Projects
+        projectName={"Secret Santa"}
+        projectImg={"./src/assets/project1.png"}
+        ProjectDescription={"I made this project so i can play with my co-workers avoiding the waste of paper. For the logic just an array random sort and for the result i send user the emails with the rules they set, as a prompt the app needs participants cuanties,  names and emails"}
+        ProjectTechnologies={"i used Tailwind css for the styling , react for the logic and for the UI, git as a version control, react router for routing , to avoid backend i use EmailJS to handle emails"}
+      />
+      <Projects
+        projectName={"Position Assignment"}
+        projectImg={"./src/assets/project12.png"}
+      />
+      <Projects
+        projectName={"Portfolio for client"}
+        projectImg={"./src/assets/project3.png"}
+      />
+      <Projects projectImg={"./src/assets/project4.png"} />
     </>
-  )
-}
-
-export default App
+  );
+};
