@@ -1,0 +1,60 @@
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.hover-underline-animation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffd02f;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.yellow {
+  fill: #ffd02f;
+}
+
+.yellowBg {
+  background-color: #ffd02f;
+}
+
+.underline {
+  content: "";
+}
+
+.violetBg {
+  background-color: #7643cc;
+}
+
+.blackModalBg {
+  background-color: #2d2c2c;
+}
+.grayText {
+  color: #6a6262;
+}
+.blackbg {
+  background-color: #1a1a1a;
+}
+
+.footerGray {
+  color: #b3aaaa;
+}
+
+.animation2 {
+  background-color: #c738bd;
+}
+
+.animation1 {
+  background-color: #de1b4a;
+}

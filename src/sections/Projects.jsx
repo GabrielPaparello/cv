@@ -3,12 +3,16 @@ import { faGit, faGithub, faReact } from "@fortawesome/free-brands-svg-icons";
 import { useState } from "react";
 import { faJs } from "@fortawesome/free-brands-svg-icons/faJs";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 export const Projects = ({
   projectName,
   projectImg,
   ProjectDescription,
   ProjectTechnologies,
+  ProjectLink,
+  ProjectGit,
+  ProjectDisabled,
 }) => {
   const [active, setActive] = useState(false);
   return (
@@ -50,11 +54,12 @@ export const Projects = ({
             <FontAwesomeIcon icon={faJs} />
           </section>
           <div>
-            <button className="my-10 m-2 border-2  border-yellow-600 w-28 h-10 rounded-lg font-bold text-yellow-600">
-              View code
+            <button className={`${ProjectDisabled ? `pointer-events-none opacity-50 border-1 border-gray-200 text-gray-100 shadow-none` : ` border-yellow-600 `}my-10 m-2 border-2   w-28 h-10 rounded-lg font-bold text-yellow-600`}>
+              <a href={ProjectGit} className={``}> View code </a>  
             </button>
-            <button className="my-10 bg-yellow-600 w-28 h-10 rounded-lg font-bold text-white">
-              Try the app
+            <button className="my-10  bg-yellow-600 w-28 h-10 rounded-lg font-bold text-white">
+              <Link to={ProjectLink}
+              >Try the app</Link>
             </button>
           </div>
         </div>

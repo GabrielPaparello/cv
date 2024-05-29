@@ -1,13 +1,14 @@
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 export const Nav = () => {
   const [open, setOpen] = useState(false)
     const nav = [
         {
           name: "Home",
-            href: "#",
+            href: "/",
           icon:'',
         },
         
@@ -33,7 +34,7 @@ export const Nav = () => {
           <ul>
               {nav.map((item, index) => (
                   <li key={index} className=''>
-                      <a href={item.href}>{item.name}</a>
+                      <Link to={item.href}>{item.name}</Link>
                   </li>
               ))}
           </ul>

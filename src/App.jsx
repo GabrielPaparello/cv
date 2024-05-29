@@ -12,16 +12,26 @@ export const App = () => {
         projectImg={"./src/assets/project1.png"}
         ProjectDescription={"I made this project so i can play with my co-workers avoiding the waste of paper. For the logic just an array random sort and for the result i send user the emails with the rules they set, as a prompt the app needs participants cuanties,  names and emails"}
         ProjectTechnologies={"i used Tailwind css for the styling , react for the logic and for the UI, git as a version control, react router for routing , to avoid backend i use EmailJS to handle emails"}
+        ProjectLink={'/InvisibleFriend'}
+        ProjectGit={'https://github.com/GabrielPaparello/InvisibleFriend'}
       />
       <Projects
         projectName={"Position Assignment"}
         projectImg={"./src/assets/project12.png"}
+        ProjectDescription={''}
+        ProjectTechnologies={''}
+        ProjectLink={'/numberAsigner'}
+        ProjectGit={''}
       />
       <Projects
         projectName={"Portfolio for client"}
         projectImg={"./src/assets/project3.png"}
+        ProjectLink={'https://gabrielacandio.netlify.app/'}
+        ProjectDisabled={true}
       />
-      <Projects projectImg={"./src/assets/project4.png"} />
+      <Projects projectImg={"./src/assets/project4.png"}
+      ProjectLink={'/TicTacToe'}
+      />
     </>
   );
 };
