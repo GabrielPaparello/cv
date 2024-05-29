@@ -24,7 +24,7 @@ export const Projects = ({
       >
         <h2 className="text-xl  mb-4">{projectName}</h2>
         <img
-          className={` h-96 object-scale-down duration-500 ${active ? 'opacity-30' : 'opacity-100'} `}
+          className={` h-96  duration-500 ${active ? 'opacity-30' : 'opacity-100'} `}
           src={projectImg}
           alt="fotografía de proyecto"
         />
