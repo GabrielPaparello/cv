@@ -4,7 +4,6 @@ import { useState } from "react";
 import { faJs } from "@fortawesome/free-brands-svg-icons/faJs";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-
 export const Projects = ({
   projectName,
   projectImg,
