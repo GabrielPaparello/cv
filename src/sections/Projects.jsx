@@ -24,7 +24,7 @@ export const Projects = ({
       >
         <h2 className="text-xl  mb-4">{projectName}</h2>
         <img
-          className={` h-96 object-scale-down duration-500 ${active ? 'opacity-30' : 'opacity-100'} `}
+          className={` h-96 object-scale-down w-96  duration-500 ${active ? 'opacity-30' : 'opacity-100'} `}
           src={projectImg}
           alt="fotografía de proyecto"
         />
@@ -62,7 +62,7 @@ export const Projects = ({
             </button>
           </div>
         </div>
-        <h3 className="mb-8">click to see</h3>
+        <h3 className="mb-8 text-sm text-gray-500">click the img to see Description</h3>
       </div>
     </>
   );
