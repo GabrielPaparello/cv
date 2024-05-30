@@ -60,16 +60,16 @@ export const Nav = () => {
             onClick={() => {
               setOpen(!open);
             }}
-            className="text-2xl text-[] text-white cursor-pointer md:invisible"
+            className="text-2xl  text-[] text-white cursor-pointer md:invisible"
           />
           {nav.map((item, index) => (
             <li key={index} className="m-7 text-md hover:bg-white">
               <FontAwesomeIcon icon={item.icon} className="mr-4" />
               
               {window.location.pathname === '/'?
-                <LinkScroll to={item.name} smooth={true} duration={500} href={item.href} className="ml-4">{item.name}</LinkScroll>
+                <LinkScroll to={item.name} smooth={true} duration={500} href={item.href} className="ml-4" onClick={() => setOpen(!open)}>{item.name}</LinkScroll>
                 :
-                <a href={item.href} className="ml-4">{item.name}</a>
+                <a href={item.href} className="ml-4" onClick={() => setOpen(!open)}>{item.name}</a>
             }
               <div className="border-b-2 border-[#7D8491] mt-4"></div>
             </li>
