@@ -37,9 +37,10 @@ export const Projects = ({
             active ? "scale-90" : "scale-0"
           } duration-700 p-4  absolute top-24  flex flex-col justify-center  gap-1 h-96 w-96`}
         >
+          
           <FontAwesomeIcon
             icon={faClose}
-            className="absolute -top-52 right-0  text-3xl "
+            className=" text-3xl mb-3 cursor-pointer ml-80"
             onClick={() => setActive(!active)}
           />
           <section>
@@ -73,6 +74,7 @@ export const Projects = ({
               <Link to={ProjectLink}>Try the app</Link>
             </button>
           </div>
+         
         </div>
         <h3 className="mb-8 text-sm text-gray-500">
           click the img to see Description

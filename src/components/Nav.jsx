@@ -51,7 +51,7 @@ export const Nav = () => {
           className="text-3xl fixed top-2 text-white cursor-pointer md:invisible"
         />
         <ul
-          className={`fixed mt-1 rounded-lg z-10 duration-700 border-t-2 border-r-2 border-[#FFC145] text-[#FFC145] bg-[#0D1321] h-screen w-fit p-2 ${
+          className={`fixed mt-1 text-lg rounded-lg z-10 duration-700 border-t-2 border-r-2 border-[#FFC145] text-[#FFC145] bg-[#0D1321] h-screen w-fit p-2 ${
             open ? "left-0 top-0" : "top-0  -left-96 invisible "
           }`}
         >
