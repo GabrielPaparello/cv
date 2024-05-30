@@ -41,14 +41,14 @@ export const Projects = ({
             onClick={() => setActive(!active)}
           />
           <section>
-            <h2 className="text-2xl font-semibold -pt-20 pb-7">Description</h2>
-            <p className="text-center text-sm">{ProjectDescription}</p>
+            <h2 className="text-3xl font-semibold -pt-20 pb-7">Description</h2>
+            <p className="text-center text-lg">{ProjectDescription}</p>
           </section>
           <section>
             <h2 className="text-2xl font-semibold p-5">Tecnologies used</h2>
-            <p className="text-center text-sm">{ProjectTechnologies}</p>
+            <p className="text-center text-lg">{ProjectTechnologies}</p>
           </section>
-          <section className="flex justify-center text-center gap-2 mt-6 text-2xl">
+          <section className="flex justify-center text-center gap-2 mt-6 text-3xl">
             <FontAwesomeIcon icon={faGithub} />
             <FontAwesomeIcon icon={faReact} />
             <FontAwesomeIcon icon={faGit} />
@@ -60,14 +60,14 @@ export const Projects = ({
                 ProjectDisabled
                   ? `pointer-events-none opacity-50 border-1 border-gray-200 text-gray-100 shadow-none`
                   : ` border-yellow-600 `
-              }my-10 m-2 border-2   w-28 h-10 rounded-lg font-bold text-yellow-600`}
+              } my-16 m-4 border-2   w-32 h-16 rounded-lg font-bold text-yellow-600 text-lg`}
             >
               <a href={ProjectGit} className={``}>
                 {" "}
                 View code{" "}
               </a>
             </button>
-            <button className="my-10  bg-yellow-600 w-28 h-10 rounded-lg font-bold text-white">
+            <button className="my-16  bg-yellow-600 w-32 h-16 rounded-lg font-bold text-lg text-white">
               <Link to={ProjectLink}>Try the app</Link>
             </button>
           </div>
