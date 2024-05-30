@@ -22,7 +22,9 @@ export const Projects = ({
           setActive(!active);
         }}
       >
-        <h2 className="text-xl  mb-4">{projectName}</h2>
+        <h2 className={`text-xl ${
+            active ? "opacity-10" : "opacity-100"
+          }   mb-4 `}>{projectName}</h2>
         <img
           className={` h-96 border-2 rounded-2xl py-3  border-[#F7AB0A] object-scale-down w-96  duration-500 ${
             active ? "opacity-10" : "opacity-100"
