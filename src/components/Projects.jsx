@@ -17,7 +17,7 @@ export const Projects = ({
   return (
     <>
       <div
-        className={`text-center  text-white  relative  m-4 p-4 flex flex-col justify-start items-center gap-3  `}
+        className={`text-center  text-white  relative  m-4 p-4 flex flex-col justify-start items-center gap-2  `}
         onClick={() => {
           setActive(!active);
         }}
@@ -76,7 +76,7 @@ export const Projects = ({
           </div>
          
         </div>
-        <h3 className="mb-8 text-sm text-gray-500">
+        <h3 className="mb-9 text-xs text-gray-600">
           click the img to see Description
         </h3>
       </div>

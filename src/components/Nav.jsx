@@ -64,14 +64,14 @@ export const Nav = () => {
           />
           {nav.map((item, index) => (
             <li key={index} className=" flex flex-col text-md ">
-              <FontAwesomeIcon icon={item.icon} className="ml-2" />
+              <FontAwesomeIcon icon={item.icon} className="ml-2 " />
               
               {window.location.pathname === '/'?
-                <LinkScroll to={item.name} smooth={true} duration={500} href={item.href} className="ml-4" onClick={() => setOpen(!open)}>{item.name}</LinkScroll>
+                <LinkScroll to={item.name} smooth={true} duration={500} href={item.href} className="ml-4  text-white" onClick={() => setOpen(!open)}>{item.name}</LinkScroll>
                 :
-                <a href={item.href} className="ml-4" onClick={() => setOpen(!open)}>{item.name}</a>
+                <a href={item.href} className="ml-4 text-white" onClick={() => setOpen(!open)}>{item.name}</a>
             }
-              <div className="border-b-2 border-[#7D8491] my-3 "></div>
+              <div className="border-b-2 rounded-full border-[#7D8491] my-3 ml-2 "></div>
             </li>
           ))}
         </ul>
