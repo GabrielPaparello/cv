@@ -39,7 +39,7 @@ export const Projects = ({
         >
           <FontAwesomeIcon
             icon={faClose}
-            className="absolute -top-20 right-0 m-2 text-3xl "
+            className="absolute -top-52 right-0  text-3xl "
             onClick={() => setActive(!active)}
           />
           <section>
