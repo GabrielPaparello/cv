@@ -16,17 +16,17 @@ export const Nav = () => {
 
     {
       name: "Projects",
-      href: "#",
+      href: "/",
       icon: faBriefcase,
     },
     {
       name: "About",
-      href: "#",
+      href: "/",
       icon: faUserAlt,
     },
     {
       name: "Contact",
-      href: "#",
+      href: "/",
       icon: faEnvelope,
     },
   ];
@@ -43,11 +43,12 @@ export const Nav = () => {
       </nav>
       <nav className="xs:block m-2 ">
         <FontAwesomeIcon
+          
           icon={faBars}
           onClick={() => {
             setOpen(!open);
           }}
-          className="text-2xl text-white cursor-pointer md:invisible"
+          className="text-2xl fixed top-2 text-white cursor-pointer md:invisible"
         />
         <ul
           className={`fixed mt-1 rounded-lg z-10 duration-700 border-t-2 border-r-2 border-[#FFC145] text-[#FFC145] bg-[#0D1321] h-screen w-fit p-2 ${
@@ -64,7 +65,12 @@ export const Nav = () => {
           {nav.map((item, index) => (
             <li key={index} className="m-7 text-md hover:bg-white">
               <FontAwesomeIcon icon={item.icon} className="mr-4" />
-              <LinkScroll to={item.name} smooth={true} duration={500} href={item.href}>{item.name}</LinkScroll>
+              
+              {window.location.pathname === '/'?
+                <LinkScroll to={item.name} smooth={true} duration={500} href={item.href} className="ml-4">{item.name}</LinkScroll>
+                :
+                <a href={item.href} className="ml-4">{item.name}</a>
+            }
               <div className="border-b-2 border-[#7D8491] mt-4"></div>
             </li>
           ))}
