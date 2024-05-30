@@ -3,6 +3,7 @@ import { faBars, faBriefcase, faClose, faEnvelope, faHome, faUserAlt } from "@fo
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { Link as LinkScroll } from "react-scroll";
 
 export const Nav = () => {
   const [open, setOpen] = useState(false);
@@ -31,7 +32,7 @@ export const Nav = () => {
   ];
   return (
     <>
-      <nav className="hidden">
+      <nav className="hidden ">
         <ul>
           {nav.map((item, index) => (
             <li key={index} className="">
@@ -40,7 +41,7 @@ export const Nav = () => {
           ))}
         </ul>
       </nav>
-      <nav className="xs:block m-2">
+      <nav className="xs:block m-2 ">
         <FontAwesomeIcon
           icon={faBars}
           onClick={() => {
@@ -49,7 +50,7 @@ export const Nav = () => {
           className="text-2xl text-white cursor-pointer md:invisible"
         />
         <ul
-          className={`fixed mt-1 rounded-lg z-10 duration-700 border-2 border-[#FFC145] text-[#FFC145] bg-[#0D1321] h-screen w-fit p-2 ${
+          className={`fixed mt-1 rounded-lg z-10 duration-700 border-t-2 border-r-2 border-[#FFC145] text-[#FFC145] bg-[#0D1321] h-screen w-fit p-2 ${
             open ? "left-0 top-0" : "top-0  -left-96 invisible "
           }`}
         >
@@ -63,7 +64,7 @@ export const Nav = () => {
           {nav.map((item, index) => (
             <li key={index} className="m-7 text-md hover:bg-white">
               <FontAwesomeIcon icon={item.icon} className="mr-4" />
-              <a href={item.href}>{item.name}</a>
+              <LinkScroll to={item.name} smooth={true} duration={500} href={item.href}>{item.name}</LinkScroll>
               <div className="border-b-2 border-[#7D8491] mt-4"></div>
             </li>
           ))}

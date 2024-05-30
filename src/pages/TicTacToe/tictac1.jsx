@@ -152,7 +152,7 @@ function TicTacToe(props) {
   }, []);
 
   return (
-    <div className="modalWrap">
+    <div className="modalWrap bodyt pb-5">
       <div className="text-center">
         <h1 className="text-3xl mt-16">A simple Tic Tac Toe </h1>
         <h2 className="text-xl">Made in Vanilla Js</h2>

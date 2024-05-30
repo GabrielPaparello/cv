@@ -5,7 +5,7 @@ import project3 from "../assets/project3.png";
 import project4 from "../assets/project4.png";
 export const ProjectSection = () => {
   return (
-    <div className="bg-gradient-to-t from-[#0D1321] to-[#252b37]">
+    <div id='Projects' className="bg-gradient-to-t from-[#0D1321] to-[#252b37]">
       <h2 className="text-3xl text-start my-10 pt-4 ml-4 text-[#F7AB0A] font-semibold tracking-wide ">
         Projects
       </h2>
