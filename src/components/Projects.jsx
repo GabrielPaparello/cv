@@ -22,7 +22,7 @@ export const Projects = ({
           setActive(!active);
         }}
       >
-        <h2 className={`text-xl font-serif tracking-wider ${
+        <h2 className={`text-2xl font-serif tracking-wider ${
             active ? "opacity-5" : "opacity-100"
           }   mb-4 `}>{projectName}</h2>
         <img
