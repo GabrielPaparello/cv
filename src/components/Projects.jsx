@@ -70,7 +70,7 @@ export const Projects = ({
                 View code{" "}
               </a>
             </button>
-            <button className="my-16  bg-yellow-600 w-32 h-16 rounded-lg font-bold text-lg text-white">
+            <button className="my-16  bg-yellow-600 w-32 h-16 rounded-lg font-bold text-lg cursor-pointer  hover:scale-110 text-white">
               <Link to={ProjectLink}>Try the app</Link>
             </button>
           </div>

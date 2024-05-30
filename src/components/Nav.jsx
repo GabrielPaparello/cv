@@ -51,7 +51,7 @@ export const Nav = () => {
           className="text-3xl fixed top-2 z-10 bg-[#0D1321] p-1 rounded-lg text-white cursor-pointer md:invisible"
         />
         <ul
-          className={`fixed mt-1 text-lg  text-start rounded-lg z-10 duration-700 border-t-2 border-r-2 border-[#7D8491] text-[#efc22b] bg-[#252b37] h-screen  p-3 ${
+          className={`fixed text-lg  text-start rounded-lg z-10 duration-700 border-t-2 border-r-2 border-[#7D8491] text-[#efc22b] bg-[#252b37] h-screen  p-3 ${
             open ? "left-0 top-0" : "top-0  -left-96 invisible "
           }`}
         >
@@ -60,7 +60,7 @@ export const Nav = () => {
             onClick={() => {
               setOpen(!open);
             }}
-            className="text-2xl  text-white cursor-pointer md:invisible"
+            className="text-3xl  text-white cursor-pointer md:invisible"
           />
           {nav.map((item, index) => (
             <li key={index} className=" flex flex-col text-md ">

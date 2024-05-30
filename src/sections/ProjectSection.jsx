@@ -27,7 +27,7 @@ export const ProjectSection = () => {
         ProjectDescription={`This project asigns a random position, "number", to the participants`}
         ProjectTechnologies={""}
         ProjectLink={"/numberAsigner"}
-        ProjectGit={""}
+        ProjectGit={"https://github.com/GabrielPaparello/InvisibleFriend/tree/main/src/pages/numberAsigner/invisibleApp"}
       />
       <Projects
         projectName={"Portfolio for client"}
@@ -37,8 +37,10 @@ export const ProjectSection = () => {
         ProjectLink={"https://gabrielacandio.netlify.app/"}
         ProjectDisabled={true}
       />
-      <Projects projectImg={project4} ProjectLink={"/TicTacToe"}
-        ProjectGit={''}
+      <Projects projectImg={project4}
+        projectName={"Tic Tac Toe"}
+        ProjectLink={"/TicTacToe"}
+        ProjectGit={'https://github.com/GabrielPaparello/tateti/tree/main'}
         ProjectDescription={'This was my first project using javascript just a simple Tic Tac Toe game.'}
       ProjectTechnologies={'This project is made fully on vanilla Javascript'}/>
 
