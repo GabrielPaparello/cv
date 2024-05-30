@@ -25,14 +25,14 @@ export const Projects = ({
         <h2 className="text-xl  mb-4">{projectName}</h2>
         <img
           className={` h-96 border-2 rounded-2xl py-3  border-[#F7AB0A] object-scale-down w-96  duration-500 ${
-            active ? "opacity-15" : "opacity-100"
+            active ? "opacity-10" : "opacity-100"
           } `}
           src={projectImg}
           alt="fotografía de proyecto"
         />
         <div
           className={`${
-            active ? "scale-75" : "scale-0"
+            active ? "scale-90" : "scale-0"
           } duration-700 p-4  absolute top-24  flex flex-col justify-center  gap-1 h-96 w-96`}
         >
           <FontAwesomeIcon
