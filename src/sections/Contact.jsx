@@ -2,7 +2,7 @@ export const Contact = () => {
   return (
     <div className="flex content-center mt-10 justify-center  items-center  ">
       <form className="flex flex-col bg-[#252b37] p-7 rounded-2xl text-lg justify-center align-middle gap-2 ">
-        <h2 className="text-3xl text-white text-center mb-3">Contact Me</h2>
+        <h2 className="text-4xl font-serif text-white text-center mb-3">Contact Me</h2>
         <label className="text-white text-xl mt-2" htmlFor="Name">
           Nombre
         </label>
