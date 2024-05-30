@@ -1,49 +1,53 @@
 export const Contact = () => {
   return (
     <div className="flex content-center mt-10 justify-center  items-center  ">
-      <form className="flex flex-col bg-[#252b37] p-7 rounded-2xl text-lg justify-center align-middle gap-2 ">
-        <h2 className="text-4xl font-serif text-white text-center mb-3">Contact Me</h2>
-        <label className="text-white text-xl mt-2" htmlFor="Name">
-          Nombre
+      <form className="flex flex-col bg-[#252b37] p-7 rounded-2xl text-sm justify-center align-middle gap-2 ">
+        <h2 className="text-3xl font-serif text-white text-center mb-3">Contact Me</h2>
+        <label className="text-white  " htmlFor="Name">
+          
         </label>
         <input
           type="text"
+          required
           name="Name"
-          placeholder=" RecruiterName"
-          className="p-2 rounded-xl"
+          placeholder=" Your Name"
+          className="p-2 rounded-xl bg-gray-200"
         />
 
-        <label className="text-white text-xl mt-2" htmlFor="Subject">
-          Subject
+        <label className="text-white  text-xl " htmlFor="Subject">
+          
         </label>
         <input
           type="text"
+          required
           name="Subject"
-          placeholder=" I want to hire you!"
-          className="p-2 rounded-xl"
+          placeholder=" Subject"
+          className="p-2 rounded-xl bg-gray-200"
         />
 
-        <label className="text-white text-xl mt-2" htmlFor="Email">
-          Email
+        <label className="text-white  " htmlFor="Email">
+         
         </label>
         <input
           type="text"
+          required
           name="Email"
-          placeholder=" sendEmail@example"
-          className="p-2 rounded-xl"
+          placeholder=" Email"
+          className="p-2 rounded-xl bg-gray-200"
         />
 
-        <label className="text-white text-xl mt-2" htmlFor="Message">
-          Message
+        <label className="text-white " htmlFor="Message">
+         
         </label>
         <textarea
           type="text"
+          required
           name="Message"
-          placeholder=" We want to work with you!!"
-          className="p-2 rounded-xl text-start"
+          placeholder=" Message"
+          className="p-2 rounded-xl text-start bg-gray-200"
         />
 
-        <button className="text-white text-xl mt-2" type="submit">
+        <button className="text-white  " type="submit">
           Enviar
         </button>
       </form>
