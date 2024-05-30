@@ -41,17 +41,17 @@ export const Nav = () => {
           ))}
         </ul>
       </nav>
-      <nav className="xs:block m-2 ">
+      <nav className="xs:block m-2  ">
         <FontAwesomeIcon
           
           icon={faBars}
           onClick={() => {
             setOpen(!open);
           }}
-          className="text-3xl fixed top-2 text-white cursor-pointer md:invisible"
+          className="text-3xl fixed top-2 z-10 bg-[#0D1321] p-1 rounded-lg text-white cursor-pointer md:invisible"
         />
         <ul
-          className={`fixed mt-1 text-lg rounded-lg z-10 duration-700 border-t-2 border-r-2 border-[#FFC145] text-[#FFC145] bg-[#0D1321] h-screen w-fit p-2 ${
+          className={`fixed mt-1 text-lg  text-start rounded-lg z-10 duration-700 border-t-2 border-r-2 border-[#7D8491] text-[#efc22b] bg-[#252b37] h-screen  p-3 ${
             open ? "left-0 top-0" : "top-0  -left-96 invisible "
           }`}
         >
@@ -60,18 +60,18 @@ export const Nav = () => {
             onClick={() => {
               setOpen(!open);
             }}
-            className="text-2xl  text-[] text-white cursor-pointer md:invisible"
+            className="text-2xl  text-white cursor-pointer md:invisible"
           />
           {nav.map((item, index) => (
-            <li key={index} className="m-7 text-md hover:bg-white">
-              <FontAwesomeIcon icon={item.icon} className="mr-4" />
+            <li key={index} className=" flex flex-col text-md ">
+              <FontAwesomeIcon icon={item.icon} className="ml-2" />
               
               {window.location.pathname === '/'?
                 <LinkScroll to={item.name} smooth={true} duration={500} href={item.href} className="ml-4" onClick={() => setOpen(!open)}>{item.name}</LinkScroll>
                 :
                 <a href={item.href} className="ml-4" onClick={() => setOpen(!open)}>{item.name}</a>
             }
-              <div className="border-b-2 border-[#7D8491] mt-4"></div>
+              <div className="border-b-2 border-[#7D8491] my-3 "></div>
             </li>
           ))}
         </ul>

@@ -26,7 +26,7 @@ export const Projects = ({
             active ? "opacity-10" : "opacity-100"
           }   mb-4 `}>{projectName}</h2>
         <img
-          className={` h-96 border-2 rounded-2xl py-3  border-[#F7AB0A] object-scale-down w-96  duration-500 ${
+          className={` h-96 shadow-xl shadow-[#0D1321] rounded-2xl py-3 border-2 border-[#F7AB0A] object-scale-down   duration-500 ${
             active ? "opacity-10" : "opacity-100"
           } `}
           src={projectImg}
@@ -44,11 +44,11 @@ export const Projects = ({
             onClick={() => setActive(!active)}
           />
           <section>
-            <h2 className="text-3xl font-semibold -pt-20 pb-7">Description</h2>
+            <h2 className="text-3xl text-[#F7AB0A] text-start font-semibold -pt-20 pb-7">Description</h2>
             <p className="text-center text-lg">{ProjectDescription}</p>
           </section>
           <section>
-            <h2 className="text-2xl font-semibold p-5">Tecnologies used</h2>
+            <h2 className="text-2xl text-[#F7AB0A] text-start font-semibold py-5 ">Tecnologies used</h2>
             <p className="text-center text-lg">{ProjectTechnologies}</p>
           </section>
           <section className="flex justify-center text-center gap-2 mt-6 text-3xl">

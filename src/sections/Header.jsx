@@ -12,12 +12,12 @@ export const Header = () => {
   return (
     <>
       <div id='Home' className='text-center m-2 mt-10 p-2  flex flex-col text-white'>
-      <div className='bg-[#FFC145] rounded-t-3xl '>
+      <div className=''>
           <h1 className='text-3xl m-2'>Gabriel</h1>
-      <h2 className='text-2xl  m-2 '>Front End Developer</h2>
+      <h2 className='text-2xl  m-2 pb-4'>Front End <span className='text-[#FFC145]'>Developer</span></h2>
         
       </div>
-      <div className='bg-[#FFC145] rounded-b-3xl '>
+      <div className='bg-[#FFC145] rounded-3xl '>
       <Lottie options={defaultOptions}
       height={350}
         width={350} />

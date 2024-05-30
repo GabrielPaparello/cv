@@ -6,17 +6,17 @@ import project4 from "../assets/project4.png";
 export const ProjectSection = () => {
   return (
     <div id='Projects' className="bg-gradient-to-t from-[#0D1321] to-[#252b37]">
-      <h2 className="text-3xl text-start my-10 pt-4 ml-4 text-[#F7AB0A] font-semibold tracking-wide ">
+      <h2 className="text-3xl text-center my-10 pt-4 ml-4 text-[#F7AB0A] font-semibold tracking-wide ">
         Projects
       </h2>
       <Projects
         projectName={"Secret Santa"}
         projectImg={project1}
         ProjectDescription={
-          "I made this project so i can play with my co-workers avoiding the waste of paper. For the logic just an array random sort and for the result i send user the emails with the rules they set, as a prompt the app needs participants cuanties,  names and emails"
+          "The web version of secret Santa.Select the amount of players, log the details and get started, and Email will be sent with the results."
         }
         ProjectTechnologies={
-          "i used Tailwind css for the styling , react for the logic and for the UI, git as a version control, react router for routing , to avoid backend i use EmailJS to handle emails"
+          "Used Tailwind css for the styling , react for the logic and UI, git as a version control, react router for routing . To avoid backend decided to use EmailJS to handle emails"
         }
         ProjectLink={"/InvisibleFriend"}
         ProjectGit={"https://github.com/GabrielPaparello/InvisibleFriend"}
@@ -24,18 +24,24 @@ export const ProjectSection = () => {
       <Projects
         projectName={"Position Assignment"}
         projectImg={project12}
-        ProjectDescription={""}
+        ProjectDescription={`This project asigns a random position, "number", to the participants`}
         ProjectTechnologies={""}
         ProjectLink={"/numberAsigner"}
         ProjectGit={""}
       />
       <Projects
         projectName={"Portfolio for client"}
+        ProjectDescription={''}
+        ProjectTechnologies={""}
         projectImg={project3}
         ProjectLink={"https://gabrielacandio.netlify.app/"}
         ProjectDisabled={true}
       />
-      <Projects projectImg={project4} ProjectLink={"/TicTacToe"} />
+      <Projects projectImg={project4} ProjectLink={"/TicTacToe"}
+        ProjectGit={''}
+        ProjectDescription={'This was my first project using javascript just a simple Tic Tac Toe game.'}
+      ProjectTechnologies={'This project is made fully on vanilla Javascript'}/>
+
     </div>
   );
 };
