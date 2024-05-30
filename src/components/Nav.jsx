@@ -1,55 +1,74 @@
-import { faBars } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
+
+import { faBars, faBriefcase, faClose, faEnvelope, faHome, faUserAlt } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export const Nav = () => {
-  const [open, setOpen] = useState(false)
-    const nav = [
-        {
-          name: "Home",
-            href: "/",
-          icon:'',
-        },
-        
-        {
-          name: "Projects",
-            href: "#",
-          icon:'',
-        },
-        {
-          name: "About",
-            href: "#",
-          icon:'',
-        },
-        {
-          name: "Contact",
-            href: "#",
-          icon:'',
-        },
-    ]
+  const [open, setOpen] = useState(false);
+  const nav = [
+    {
+      name: "Home",
+      href: "/",
+      icon: faHome,
+    },
+
+    {
+      name: "Projects",
+      href: "#",
+      icon: faBriefcase,
+    },
+    {
+      name: "About",
+      href: "#",
+      icon: faUserAlt,
+    },
+    {
+      name: "Contact",
+      href: "#",
+      icon: faEnvelope,
+    },
+  ];
   return (
     <>
-    <nav className='hidden'>
-          <ul>
-              {nav.map((item, index) => (
-                  <li key={index} className=''>
-                      <Link to={item.href}>{item.name}</Link>
-                  </li>
-              ))}
-          </ul>
-    </nav>
-      <nav className='xs:block m-5 '>
-        <FontAwesomeIcon icon={faBars} onClick={() => { setOpen(!open) }} className='text-2xl cursor-pointer md:invisible' />
-        
-          <ul className={`fixed rounded-lg z-10 duration-1000 bg-fuchsia-800 h-screen w-fit p-4 ${open ? "left-0" : "  -left-96 invisible "}`}>
-              {nav.map((item, index) => (
-                  <li key={index} className=''>
-                      <a href={item.href}>{item.name}</a>
-                  </li>
-              ))}
-          </ul>
-    </nav>
+      <nav className="hidden">
+        <ul>
+          {nav.map((item, index) => (
+            <li key={index} className="">
+              <Link to={item.href}>{item.name}</Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
+      <nav className="xs:block m-2">
+        <FontAwesomeIcon
+          icon={faBars}
+          onClick={() => {
+            setOpen(!open);
+          }}
+          className="text-2xl text-white cursor-pointer md:invisible"
+        />
+        <ul
+          className={`fixed mt-1 rounded-lg z-10 duration-700 border-2 border-[#FFC145] text-[#FFC145] bg-[#0D1321] h-screen w-fit p-2 ${
+            open ? "left-0 top-0" : "top-0  -left-96 invisible "
+          }`}
+        >
+          <FontAwesomeIcon
+            icon={faClose}
+            onClick={() => {
+              setOpen(!open);
+            }}
+            className="text-2xl text-[] text-white cursor-pointer md:invisible"
+          />
+          {nav.map((item, index) => (
+            <li key={index} className="m-7 text-md hover:bg-white">
+              <FontAwesomeIcon icon={item.icon} className="mr-4" />
+              <a href={item.href}>{item.name}</a>
+              <div className="border-b-2 border-[#7D8491] mt-4"></div>
+            </li>
+          ))}
+        </ul>
+      </nav>
     </>
-  )
-}
+  );
+};

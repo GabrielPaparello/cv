@@ -17,25 +17,27 @@ export const Projects = ({
   return (
     <>
       <div
-        className={`text-center   relative  border-1 border-gray-200 shadow-md p-4 shadow-[#000] flex flex-col justify-center `}
+        className={`text-center  text-white  relative  m-4 p-4 flex flex-col justify-start items-center gap-3  `}
         onClick={() => {
           setActive(!active);
         }}
       >
         <h2 className="text-xl  mb-4">{projectName}</h2>
         <img
-          className={` h-96 object-scale-down w-96  duration-500 ${active ? 'opacity-30' : 'opacity-100'} `}
+          className={` h-96 border-2 rounded-2xl border-[#F7AB0A] object-scale-down w-96  duration-500 ${
+            active ? "opacity-15" : "opacity-100"
+          } `}
           src={projectImg}
           alt="fotografía de proyecto"
         />
         <div
           className={`${
             active ? "scale-75" : "scale-0"
-          } duration-700 p-4 absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center gap-1`}
+          } duration-700 p-4  absolute top-24  flex flex-col justify-center  gap-1 h-96 w-96`}
         >
           <FontAwesomeIcon
             icon={faClose}
-            className="absolute top-0 right-0 m-2 text-3xl "
+            className="absolute -top-20 right-0 m-2 text-3xl "
             onClick={() => setActive(!active)}
           />
           <section>
@@ -53,16 +55,26 @@ export const Projects = ({
             <FontAwesomeIcon icon={faJs} />
           </section>
           <div>
-            <button className={`${ProjectDisabled ? `pointer-events-none opacity-50 border-1 border-gray-200 text-gray-100 shadow-none` : ` border-yellow-600 `}my-10 m-2 border-2   w-28 h-10 rounded-lg font-bold text-yellow-600`}>
-              <a href={ProjectGit} className={``}> View code </a>  
+            <button
+              className={`${
+                ProjectDisabled
+                  ? `pointer-events-none opacity-50 border-1 border-gray-200 text-gray-100 shadow-none`
+                  : ` border-yellow-600 `
+              }my-10 m-2 border-2   w-28 h-10 rounded-lg font-bold text-yellow-600`}
+            >
+              <a href={ProjectGit} className={``}>
+                {" "}
+                View code{" "}
+              </a>
             </button>
             <button className="my-10  bg-yellow-600 w-28 h-10 rounded-lg font-bold text-white">
-              <Link to={ProjectLink}
-              >Try the app</Link>
+              <Link to={ProjectLink}>Try the app</Link>
             </button>
           </div>
         </div>
-        <h3 className="mb-8 text-sm text-gray-500">click the img to see Description</h3>
+        <h3 className="mb-8 text-sm text-gray-500">
+          click the img to see Description
+        </h3>
       </div>
     </>
   );
