@@ -6,7 +6,7 @@ export const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    if (e.target.email.value.toLowerCase().includes("@gmail.com")) {
+    if (e.target.Email.value.toLowerCase().includes("@gmail.com")) {
       emailjs
         .sendForm("service_v4znwzs", "template_2o8n997", form.current, {
           publicKey: "6DQJxnCew0qoEVF6r",
@@ -22,10 +22,10 @@ export const Contact = () => {
       e.target.reset();
       alert("mensaje enviado");
     } else if (
-      e.target.email.value.toLowerCase().includes("@outlook.com") ||
-      e.target.email.value.toLowerCase().includes("@hotmail.com") ||
-      e.target.email.value.toLowerCase().includes("@live.com") ||
-      e.target.email.value.toLowerCase().includes("@outlook.es")
+      e.target.Email.value.toLowerCase().includes("@outlook.com") ||
+      e.target.Email.value.toLowerCase().includes("@hotmail.com") ||
+      e.target.Email.value.toLowerCase().includes("@live.com") ||
+      e.target.Email.value.toLowerCase().includes("@outlook.es")
     ) {
       emailjs
         .sendForm("service_7bg3xeu", "template_2o8n997", form.current, {
