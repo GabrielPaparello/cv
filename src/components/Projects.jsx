@@ -26,7 +26,7 @@ export const Projects = ({
             active ? "opacity-5" : "opacity-100"
           }   mb-4 `}>{projectName}</h2>
         <img
-          className={` h-[400px] shadow-xl shadow-[#0D1321] rounded-2xl object-scale-down w-     [600px]  duration-500 ${
+          className={` h-[400px] shadow-xl shadow-[#0D1321] rounded-2xl  w-     [600px]  duration-500 ${
             active ? "opacity-10 " : "opacity-100"
           } `}
           src={projectImg}
