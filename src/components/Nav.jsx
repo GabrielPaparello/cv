@@ -93,7 +93,7 @@ export const Nav = ({ handleNav }) => {
                   >
                     <FontAwesomeIcon
                       icon={item.icon}
-                      className="ml-2 mt-2 rounded-full text-2xl p-2 bg-[#0D1321] cursor-pointer "
+                      className="ml-2 mt-2 rounded-full text-2xl p-4 bg-[#0D1321] cursor-pointer "
                     />
                   </LinkScroll>
                   <LinkScroll
@@ -101,7 +101,7 @@ export const Nav = ({ handleNav }) => {
                     smooth={true}
                     duration={500}
                     href={item.href}
-                    className="ml-4  text-white"
+                    className="pl-4  text-white"
                     onClick={() => setOpen(!open)}
                   >
                     {item.name}
