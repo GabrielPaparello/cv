@@ -1,6 +1,6 @@
 export const Contact = () => {
   return (
-    <div className="flex content-center mt-10  justify-center  items-center  ">
+    <div className="flex flex-col content-center mt-10  justify-center  items-center  ">
       <form className="flex flex-col w-[350px] bg-[#252b37] p-7 rounded-2xl text-sm justify-center align-middle gap-2 mb-10">
         <h2 className="text-3xl font-serif text-white text-center mb-3">Contact Me</h2>
         <label className="text-white  " htmlFor="Name">
@@ -46,10 +46,10 @@ export const Contact = () => {
           placeholder=" Message"
           className="p-2 rounded-xl text-start bg-gray-200"
         />
-
-        <button className="text-white  " type="submit">
+        <button className="ml-[50px] bg-black border-2 border-[#b47c03] text-[#F7AB0A] font-bold text-md hover:bg-[#F7AB0A] hover:text-black w-[200px]  p-2 rounded-xl" type="submit">
           Enviar
         </button>
+
       </form>
     </div>
   );

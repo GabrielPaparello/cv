@@ -3,12 +3,22 @@ import project1 from "../assets/project1.png";
 import project12 from "../assets/project12.png";
 import project3 from "../assets/project3.png";
 import project4 from "../assets/project4.png";
+import animationData from "../assets/animation3.json";
+import Lottie from "react-lottie";
 export const ProjectSection = () => {
+  const defaultOptions = {
+    loop: false,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
   return (
-    // <div id='Projects' className="bg-gradient-to-t from-[#0D1321] to-[#252b37]">
-    <div id='Projects' className="bg-gradient-to-t from-[#252b37] to-[#0D1321]">
-      <h2 className="text-4xl font-serif text-center my-10 pt-4  text-[#F7AB0A]  tracking-wide ">
+    <div id="Projects" className="bg-gradient-to-t from-[#252b37] to-[#0D1321]">
+      <h2 className="text-4xl font-serif text-center my-10 pt-4  text-[#F7AB0A]  tracking-wider ">
         Projects
+      <Lottie options={defaultOptions} height={250} width={250} />
       </h2>
       <Projects
         projectName={"Secret Santa"}
@@ -28,23 +38,28 @@ export const ProjectSection = () => {
         ProjectDescription={`This project asigns a random position, "number", to the participants`}
         ProjectTechnologies={""}
         ProjectLink={"/numberAsigner"}
-        ProjectGit={"https://github.com/GabrielPaparello/InvisibleFriend/tree/main/src/pages/numberAsigner/invisibleApp"}
+        ProjectGit={
+          "https://github.com/GabrielPaparello/InvisibleFriend/tree/main/src/pages/numberAsigner/invisibleApp"
+        }
       />
       <Projects
         projectName={"Portfolio for client"}
-        ProjectDescription={''}
+        ProjectDescription={""}
         ProjectTechnologies={""}
         projectImg={project3}
         ProjectLink={"https://gabrielacandio.netlify.app/"}
         ProjectDisabled={true}
       />
-      <Projects projectImg={project4}
+      <Projects
+        projectImg={project4}
         projectName={"Tic Tac Toe"}
         ProjectLink={"/TicTacToe"}
-        ProjectGit={'https://github.com/GabrielPaparello/tateti/tree/main'}
-        ProjectDescription={'This was my first project using javascript just a simple Tic Tac Toe game.'}
-      ProjectTechnologies={'This project is made fully on vanilla Javascript'}/>
-
+        ProjectGit={"https://github.com/GabrielPaparello/tateti/tree/main"}
+        ProjectDescription={
+          "This was my first project using javascript just a simple Tic Tac Toe game."
+        }
+        ProjectTechnologies={"This project is made fully on vanilla Javascript"}
+      />
     </div>
   );
 };
