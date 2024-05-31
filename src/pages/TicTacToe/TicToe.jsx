@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import TicTacToe from './tictac1'
 import { Nav } from '../../components/Nav'
 
 function TicToe() {
+    const [open, setOpen] = useState(false);
+
   return (
     <>
-    <Nav />
+    <Nav open={open} setOpen={setOpen}/>
     <TicTacToe />
     </>
     

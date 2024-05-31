@@ -9,12 +9,12 @@ import { useState } from "react";
 export const App = () => {
   // THIS WAS MY FIX TO MAKE THE NAV CLOSE 
   // CLICKING ON THE BACKGROUND
-    const [open, setOpen] = useState(false);
+    const [handleNav, setHandleNav] = useState(false);
 
   return (
     <>
-      <Nav setOpen={setOpen} open={open} />
-      <div onClick={() => setOpen(false)}>
+      <Nav handleNav={handleNav}/>
+      <div onClick={() => setHandleNav(!handleNav)}>
 
       <Header />
       <ProjectSection />

@@ -152,10 +152,11 @@ export const InvisibleFriend = () => {
       }
     });
   }, [assignments]);
+    const [open, setOpen] = useState(false);
 
   return (
     <>
-      <Nav />
+      <Nav  open={open} setOpen={setOpen}/>
       {/* Modal Cantidad Request + Animation */}
       <div
         className={` modalContainer absolute w-full  transition-all  ease-out ${

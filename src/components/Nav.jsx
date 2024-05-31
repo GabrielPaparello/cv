@@ -7,11 +7,21 @@ import {
   faUserAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Link as LinkScroll } from "react-scroll";
 
-export const Nav = ({ open, setOpen }) => {
+export const Nav = ({ handleNav }) => {
+  const [open, setOpen] = useState(false);
+
+
+  useEffect(() => {
+    if (handleNav === true){
+      setOpen(false);}
+  }, [handleNav]);
+
+
+
   const nav = [
     {
       name: "Home",
@@ -55,8 +65,8 @@ export const Nav = ({ open, setOpen }) => {
           className="text-3xl fixed top-2 z-10 bg-[#0D1321]  p-1 rounded-lg text-white cursor-pointer md:invisible"
         />
         <ul
-          className={`fixed text-lg tracking-wider font-semibold  text-start rounded-r-full z-10 duration-700 bg-gradient-to-t from-[#0D1321] to-[#252b37] text-[#efc22b] bg-[#252b37] h-[500px] p-3 pr-4 ${
-            open ? "left-0 -top-1" : "-top-1  -left-96 invisible "
+          className={`fixed text-lg flex flex-row tracking-wider font-semibold ease-in-outtext-start rounded-b-[80px] w-screen z-10 duration-700 bg-gradient-to-b from-[#0D1321] to-[#252b37] text-[#efc22b] bg-[#252b37]   p-3 pr-4 ${
+            open ? "left-0 top-0" : "-top-96  -left-0 invisible "
           }`}
         >
           <FontAwesomeIcon
@@ -67,9 +77,12 @@ export const Nav = ({ open, setOpen }) => {
             className="text-3xl  text-white cursor-pointer md:invisible"
           />
           {nav.map((item, index) => (
-            <li key={index} className=" flex flex-col items-center text-md ">
+            <li
+              key={index}
+              className=" flex flex-row items-center  -ml-2 text-md "
+            >
               {window.location.pathname === "/" ? (
-                <>
+                <div className="flex flex-col items-center">
                   <LinkScroll
                     to={item.name}
                     smooth={true}
@@ -93,9 +106,9 @@ export const Nav = ({ open, setOpen }) => {
                   >
                     {item.name}
                   </LinkScroll>
-                </>
+                </div>
               ) : (
-                <>
+                <div className="flex flex-col items-center">
                   <FontAwesomeIcon
                     icon={item.icon}
                     className="ml-2 mt-2 rounded-full text-xl  p-2 bg-[#0D1321] cursor-pointer "
@@ -107,9 +120,11 @@ export const Nav = ({ open, setOpen }) => {
                   >
                     {item.name}
                   </a>
-                </>
+                </div>
               )}
-              <div className="border-b-2 rounded-full w-[50%] border-[#7D8491] my-3 ml-2 "></div>
+              {item.name === "Contact" ? null : (
+                <div className="border-r-2 rounded-full h-10 border-[#7D8491] my-3 ml-2 "></div>
+              )}
             </li>
           ))}
         </ul>
