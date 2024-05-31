@@ -79,7 +79,7 @@ export const Nav = ({ handleNav }) => {
           {nav.map((item, index) => (
             <li
               key={index}
-              className=" flex flex-row items-center  -ml-2 text-md "
+              className=" flex flex-row items-center  -ml-3 text-md "
             >
               {window.location.pathname === "/" ? (
                 <div className="flex flex-col items-center">
@@ -123,7 +123,7 @@ export const Nav = ({ handleNav }) => {
                 </div>
               )}
               {item.name === "Contact" ? null : (
-                <div className="border-r-2 rounded-full h-10 border-[#7D8491] my-3 ml-2 "></div>
+                <div className="border-r-2 rounded-full h-9 border-[#7D8491]  mx-2 "></div>
               )}
             </li>
           ))}
