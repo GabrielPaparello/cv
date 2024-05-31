@@ -65,7 +65,7 @@ export const Nav = ({ handleNav }) => {
           className="text-3xl fixed top-2 z-10 bg-[#0D1321]  p-1 rounded-lg text-white cursor-pointer md:invisible"
         />
         <ul
-          className={`fixed text-lg flex justify-center flex-row tracking-wider font-semibold ease-in-outtext-start rounded-b-[80px] w-screen z-10 duration-700 bg-gradient-to-b from-[#0D1321] to-[#252b37] text-[#efc22b] bg-[#252b37]   p-3 pr-4 ${
+          className={`fixed text-lg flex justify-center  flex-row tracking-wider font-semibold ease-in-outtext-start rounded-b-[80px] w-screen z-10 duration-700 bg-gradient-to-b from-[#0D1321] to-[#252b37] text-[#efc22b] bg-[#252b37]   p-3 pr-4 ${
             open ? "left-0 top-0" : "-top-96  -left-0 invisible "
           }`}
         >
@@ -93,7 +93,7 @@ export const Nav = ({ handleNav }) => {
                   >
                     <FontAwesomeIcon
                       icon={item.icon}
-                      className="ml-2 mt-2 rounded-full text-2xl p-4 bg-[#0D1321] cursor-pointer "
+                      className="ml-2 mt-2 rounded-full text-2xl p-2 bg-[#0D1321] cursor-pointer "
                     />
                   </LinkScroll>
                   <LinkScroll
