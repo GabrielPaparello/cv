@@ -64,12 +64,18 @@ export const Nav = () => {
           />
           {nav.map((item, index) => (
             <li key={index} className=" flex flex-col items-center text-md ">
-              <FontAwesomeIcon icon={item.icon} className="ml-2 mt-2 rounded-full  p-2 bg-[#0D1321] cursor-pointer " />
+              {/* <FontAwesomeIcon icon={item.icon} className="ml-2 mt-2 rounded-full  p-2 bg-[#0D1321] cursor-pointer " /> */}
               
-              {window.location.pathname === '/'?
-                <LinkScroll to={item.name} smooth={true} duration={500} href={item.href} className="ml-4  text-white" onClick={() => setOpen(!open)}>{item.name}</LinkScroll>
+              {window.location.pathname === '/' ?
+                <>
+                  <LinkScroll to={item.name} smooth={true} duration={500} href={item.href} className="" onClick={() => setOpen(!open)}><FontAwesomeIcon icon={item.icon} className="ml-2 mt-2 rounded-full  p-2 bg-[#0D1321] cursor-pointer " /></LinkScroll>
+                  <LinkScroll to={item.name} smooth={true} duration={500} href={item.href} className="ml-4  text-white" onClick={() => setOpen(!open)}>{item.name}</LinkScroll>
+                </>
                 :
+                <>
+                  <FontAwesomeIcon icon={item.icon} className="ml-2 mt-2 rounded-full  p-2 bg-[#0D1321] cursor-pointer " />
                 <a href={item.href} className="ml-4 text-white" onClick={() => setOpen(!open)}>{item.name}</a>
+                </>
             }
               <div className="border-b-2 rounded-full w-[50%] border-[#7D8491] my-3 ml-2 "></div>
             </li>

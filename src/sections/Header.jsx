@@ -36,9 +36,12 @@ export const Header = () => {
             See my Work
           </button>
           </LinkScroll>
+          <LinkScroll to='Contact' smooth={true} duration={500}>
           <button className="bg-[#FFC145] border-2 border-[#FFC145] px-4 py-2 rounded-lg m-4 hover:scale-110 hover:font-bold duration-300">
             Contact Me
           </button>
+          </LinkScroll>
+         
         </div>
       </div>
     </>
