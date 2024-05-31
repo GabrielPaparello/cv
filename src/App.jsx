@@ -17,8 +17,8 @@ export const App = () => {
       <div onClick={() => setHandleNav(!handleNav)}>
 
       <Header />
+      <About />
       <ProjectSection />
-      {/* <About /> */}
       <Contact />
       <Footer />
       </div>
