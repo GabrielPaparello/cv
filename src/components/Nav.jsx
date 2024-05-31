@@ -11,8 +11,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Link as LinkScroll } from "react-scroll";
 
-export const Nav = () => {
-  const [open, setOpen] = useState(false);
+export const Nav = ({ open, setOpen }) => {
   const nav = [
     {
       name: "Home",
