@@ -74,7 +74,7 @@ export const Nav = ({ handleNav }) => {
             onClick={() => {
               setOpen(!open);
             }}
-            className="text-3xl  text-white cursor-pointer md:invisible"
+            className="text-3xl -ml-6 mr-3 text-white cursor-pointer md:invisible"
           />
           {nav.map((item, index) => (
             <li
@@ -93,7 +93,7 @@ export const Nav = ({ handleNav }) => {
                   >
                     <FontAwesomeIcon
                       icon={item.icon}
-                      className="ml-2 mt-2 rounded-full text-xl p-2 bg-[#0D1321] cursor-pointer "
+                      className="ml-2 mt-2 rounded-full text-2xl p-2 bg-[#0D1321] cursor-pointer "
                     />
                   </LinkScroll>
                   <LinkScroll
