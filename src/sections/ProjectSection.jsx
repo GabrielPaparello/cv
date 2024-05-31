@@ -7,7 +7,8 @@ import animationData from "../assets/animation3.json";
 import Lottie from "react-lottie";
 export const ProjectSection = () => {
   const defaultOptions = {
-    loop: false,
+    
+    loop: 2,
     autoplay: true,
     animationData: animationData,
     rendererSettings: {
@@ -15,11 +16,14 @@ export const ProjectSection = () => {
     },
   };
   return (
-    <div id="Projects" className="bg-gradient-to-t from-[#252b37] to-[#0D1321]">
-      <h2 className="text-4xl font-serif text-center my-10 pt-4  text-[#F7AB0A]  tracking-wider ">
+    <div id="Projects" className="bg-gradient-to-t flex flex-col justify-center align-middle items-center from-[#252b37] to-[#0D1321]">
+      <div className="bg-black bg-opacity-50 rounded-full w-[300px] h-[300px] ">
+      <h2 className="text-4xl font-serif text-center    text-[#F7AB0A]  tracking-wider ">
         Projects
       <Lottie options={defaultOptions} height={250} width={250} />
       </h2>
+
+      </div>
       <Projects
         projectName={"Secret Santa"}
         projectImg={project1}
