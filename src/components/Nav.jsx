@@ -99,7 +99,7 @@ export const Nav = () => {
                 <>
                   <FontAwesomeIcon
                     icon={item.icon}
-                    className="ml-2 mt-2 rounded-full   p-2 bg-[#0D1321] cursor-pointer "
+                    className="ml-2 mt-2 rounded-full text-xl  p-2 bg-[#0D1321] cursor-pointer "
                   />
                   <a
                     href={item.href}
