@@ -16,7 +16,7 @@ export const ProjectSection = () => {
     },
   };
   return (
-    <div id="Projects" className="bg-gradient-to-t flex flex-col justify-center align-middle items-center from-[#252b37] to-[#0D1321]">
+    <div id="Projects" className="bg-gradient-to-t mt-24 flex flex-col justify-center align-middle items-center from-[#252b37] to-[#0D1321]">
       <div className="bg-black bg-opacity-50 rounded-full w-[300px] h-[300px] ">
       <h2 className="text-4xl font-serif text-center    text-[#F7AB0A]  tracking-wider ">
         Projects
