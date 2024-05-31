@@ -42,6 +42,7 @@ export const Contact = () => {
       e.target.reset();
       alert("mensaje enviado");
     }
+  };
     return (
       <div id="Contact" className="flex flex-col content-center mt-10  justify-center  items-center  ">
         <form
@@ -98,4 +99,4 @@ export const Contact = () => {
       </div>
     );
   };
-};
+
