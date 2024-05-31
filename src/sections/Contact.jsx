@@ -1,7 +1,7 @@
 export const Contact = () => {
   return (
-    <div className="flex content-center mt-10 justify-center  items-center  ">
-      <form className="flex flex-col bg-[#252b37] p-7 rounded-2xl text-sm justify-center align-middle gap-2 mb-10">
+    <div className="flex content-center mt-10  justify-center  items-center  ">
+      <form className="flex flex-col w-[350px] bg-[#252b37] p-7 rounded-2xl text-sm justify-center align-middle gap-2 mb-10">
         <h2 className="text-3xl font-serif text-white text-center mb-3">Contact Me</h2>
         <label className="text-white  " htmlFor="Name">
           
