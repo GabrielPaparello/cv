@@ -48,11 +48,11 @@ export const Nav = () => {
           onClick={() => {
             setOpen(!open);
           }}
-          className="text-3xl fixed top-2 z-10 bg-[#0D1321] p-1 rounded-lg text-white cursor-pointer md:invisible"
+          className="text-3xl fixed top-2 z-10 bg-[#0D1321]  p-1 rounded-lg text-white cursor-pointer md:invisible"
         />
         <ul
-          className={`fixed text-lg  text-start rounded-lg z-10 duration-700 bg-gradient-to-t from-[#0D1321] to-[#252b37] text-[#efc22b] bg-[#252b37] h-screen  p-3 ${
-            open ? "left-0 top-0" : "top-0  -left-96 invisible "
+          className={`fixed text-lg tracking-wider font-semibold  text-start rounded-r-full z-10 duration-700 bg-gradient-to-t from-[#0D1321] to-[#252b37] text-[#efc22b] bg-[#252b37] h-screen  p-3 ${
+            open ? "left-0 -top-1" : "-top-1  -left-96 invisible "
           }`}
         >
           <FontAwesomeIcon
@@ -63,15 +63,15 @@ export const Nav = () => {
             className="text-3xl  text-white cursor-pointer md:invisible"
           />
           {nav.map((item, index) => (
-            <li key={index} className=" flex flex-col text-md ">
-              <FontAwesomeIcon icon={item.icon} className="ml-2 " />
+            <li key={index} className=" flex flex-col items-center text-md ">
+              <FontAwesomeIcon icon={item.icon} className="ml-2 mt-2 rounded-full  p-2 bg-[#0D1321] cursor-pointer " />
               
               {window.location.pathname === '/'?
                 <LinkScroll to={item.name} smooth={true} duration={500} href={item.href} className="ml-4  text-white" onClick={() => setOpen(!open)}>{item.name}</LinkScroll>
                 :
                 <a href={item.href} className="ml-4 text-white" onClick={() => setOpen(!open)}>{item.name}</a>
             }
-              <div className="border-b-2 rounded-full border-[#7D8491] my-3 ml-2 "></div>
+              <div className="border-b-2 rounded-full w-[50%] border-[#7D8491] my-3 ml-2 "></div>
             </li>
           ))}
         </ul>
