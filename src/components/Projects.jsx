@@ -24,7 +24,7 @@ export const Projects = ({
       >
         <h2
           className={`backFace text-2xl duration-[2s] font-serif tracking-wider  ${
-            active ? "rotationBack3d" : ""
+            active ? "rotation3d" : ""
           }   mb-4 `}
         >
           {projectName}
