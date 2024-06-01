@@ -47,11 +47,58 @@ export const Nav = ({ handleNav }) => {
   ];
   return (
     <>
-      <nav className="hidden ">
-        <ul>
+      <nav className="invisible md:visible text-white flex mt-2 w-full font-semibold  z-10  bg-gradient-to-b from-[#0D1321] to-[#252b37] opacity-90   justify-end items-center">
+        <ul
+          className={` text-lg flex flex-row justify-center gap-4 mr-4 items-center font-semibold  `}
+        >
           {nav.map((item, index) => (
-            <li key={index} className="">
-              <Link to={item.href}>{item.name}</Link>
+            
+            <li
+              key={index}
+              className=" flex flex-row items-center   text-lg "
+            >
+              {window.location.pathname === "/" ? (
+                <div className="flex   flex-row items-center  ">
+                  <LinkScroll
+                    to={item.name}
+                    smooth={true}
+                    duration={500}
+                    href={item.href}
+                    className=""
+                    onClick={() => setOpen(!open)}
+                  >
+                    <FontAwesomeIcon
+                      icon={item.icon}
+                      className="rounded-full text-[#00df9a] border-2 border-[#00df9a] mr-2 text-lg p-2 bg-[#0D1321] cursor-pointer "
+                    />
+                  </LinkScroll>
+                  <LinkScroll
+                    to={item.name}
+                    smooth={true}
+                    duration={500}
+                    href={item.href}
+                    className="font-light tracking-wider font-[Poppins] text-white"
+                    onClick={() => setOpen(!open)}
+                  >
+                    {item.name}
+                  </LinkScroll>
+                </div>
+              ) : (
+                <div className="flex flex-row items-center">
+                  <FontAwesomeIcon
+                    icon={item.icon}
+                    className="ml-2 mt-2 rounded-full text-xl text-[#00df9a] border-2 border-[#00df9a]  p-2 bg-[#0D1321] cursor-pointer "
+                  />
+                  <a
+                    href={item.href}
+                    className="ml-4 text-white"
+                    onClick={() => setOpen(!open)}
+                  >
+                    {item.name}
+                  </a>
+                </div>
+              )}
+              
             </li>
           ))}
         </ul>
