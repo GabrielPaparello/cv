@@ -66,7 +66,7 @@ export const Nav = ({ handleNav }) => {
         />
         
         <ul
-          className={`fixed text-lg flex justify-center  flex-row tracking-wider font-semibold ease-in-outtext-start rounded-b-[80px] w-screen z-10 duration-700 bg-gradient-to-b from-[#0D1321] to-[#252b37] text-[#efc22b] bg-[#252b37]   p-3 pr-4 ${
+          className={`fixed text-lg flex justify-center  flex-row tracking-wider font-semibold ease-in-out text-start rounded-b-[80px] w-screen z-10 duration-700 bg-gradient-to-b from-[#0D1321] to-[#252b37] opacity-90 text-[#efc22b] bg-[#252b37]    p-3 pr-4 ${
             open ? "left-0 top-0" : "-top-96  -left-0 invisible "
           }`}
         >

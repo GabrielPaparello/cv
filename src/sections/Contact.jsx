@@ -31,7 +31,7 @@ export const Contact = () => {
         onSubmit={sendEmail}
         ref={form}
         id="Contact"
-        className="flex flex-col w-[350px] bg-[#252b37] p-7 rounded-2xl text-sm justify-center align-middle gap-2 mb-10"
+        className="flex flex-col w-[350px] bg-[#252b37] p-7 rounded-2xl text-sm  shadow-lg shadow-black justify-center align-middle gap-2 mb-10"
       >
         <h2 className="text-3xl font-serif text-white text-center mb-3">
           Contact Me
