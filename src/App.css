@@ -1,3 +1,21 @@
 body {
     background-color: #0D1321;
 }
+
+
+
+
+.backFace{
+    backface-visibility: hidden;
+}
+
+.rotation3d {
+    transform: perspective(600px) rotateY(-180deg);
+    
+}
+.rotationBack3d {
+    transform: perspective(600px) rotateY(180deg);
+    
+}
+
+
