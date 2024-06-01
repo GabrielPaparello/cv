@@ -1,7 +1,7 @@
 export const About = () => {
   return (
     <div className="flex flex-row justify-center">
-      <div className="text-white flex flex-col  mt-10 text-start  w-[300px] ">
+      <div className="text-white flex flex-col  mt-10 text-start  w-[340px] ">
         <section>
           <h2 className="text-xl font-serif text-[#00df9a] m-2"> About Me</h2>
           <p className="text-md font-serif m-2 pb-4">
