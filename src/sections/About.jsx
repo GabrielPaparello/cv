@@ -16,7 +16,7 @@ export const About = () => {
           <p className="text-lg font-serif">
             Currently my stack is: <br />
             <span className="font-bold text-md font-sans text-[#d1ff00]">
-              HTML, CSS, JavaScript, React, Tailwind, Material UI, jquery.
+              HTML, CSS, JavaScript, React, Tailwind, Material UI, Git, Github.
             </span>
           </p>
           <p className="text-sm font-sans">
