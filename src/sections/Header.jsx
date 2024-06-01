@@ -14,7 +14,7 @@ export const Header = () => {
     <>
       <div
         id="Home"
-        className="text-center m-2 mt-10 p-2  flex flex-col text-white"
+        className="text-center m-2 mt-5 p-2  flex flex-col text-white"
       >
         <div className="">
           <h1 className="text-3xl font-serif m-2">Gabriel</h1>
