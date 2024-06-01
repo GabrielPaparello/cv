@@ -95,7 +95,7 @@ export const Nav = ({ handleNav }) => {
                   >
                     <FontAwesomeIcon
                       icon={item.icon}
-                      className="ml-2 mt-2 rounded-full text-2xl p-2 bg-[#0D1321] cursor-pointer "
+                      className="ml-2 mt-2 rounded-full text-[#00df9a] border-2 border-[#00df9a] text-2xl p-2 bg-[#0D1321] cursor-pointer "
                     />
                   </LinkScroll>
                   <LinkScroll
@@ -103,7 +103,7 @@ export const Nav = ({ handleNav }) => {
                     smooth={true}
                     duration={500}
                     href={item.href}
-                    className="pl-4  text-white"
+                    className="pl-4 font-light tracking-wider font-[Poppins] text-white"
                     onClick={() => setOpen(!open)}
                   >
                     {item.name}
@@ -113,7 +113,7 @@ export const Nav = ({ handleNav }) => {
                 <div className="flex flex-col items-center">
                   <FontAwesomeIcon
                     icon={item.icon}
-                    className="ml-2 mt-2 rounded-full text-xl  p-2 bg-[#0D1321] cursor-pointer "
+                    className="ml-2 mt-2 rounded-full text-xl text-[#00df9a] border-2 border-[#00df9a]  p-2 bg-[#0D1321] cursor-pointer "
                   />
                   <a
                     href={item.href}
