@@ -3,7 +3,9 @@ body {
 }
 
 
-
+button a {
+    cursor: pointer;
+}
 
 .backFace{
     backface-visibility: hidden;

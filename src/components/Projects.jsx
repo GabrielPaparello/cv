@@ -17,7 +17,7 @@ export const Projects = ({
   return (
     <>
       <div
-        className={`text-center  text-white  relative  m-4 p-4 flex flex-col justify-start items-center gap-2  `}
+        className={`text-center  text-white  relative  m-4 p-4 flex flex-col  justify-start items-center gap-2  `}
         onClick={() => {
           setActive(!active);
         }}

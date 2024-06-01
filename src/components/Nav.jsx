@@ -47,7 +47,7 @@ export const Nav = ({ handleNav }) => {
   ];
   return (
     <>
-      <nav className="invisible md:visible text-white flex mt-2 w-full font-semibold  z-10  bg-gradient-to-b from-[#0D1321] to-[#252b37] opacity-90   justify-end items-center">
+      <nav className="invisible md:visible md:h-[80px] text-white flex mt-2 w-full font-semibold  z-10  bg-gradient-to-b  from-[#0D1321] to-[#252b37] opacity-80   justify-end items-center">
         <ul
           className={` text-lg flex flex-row justify-center gap-4 mr-4 items-center font-semibold  `}
         >
@@ -55,7 +55,7 @@ export const Nav = ({ handleNav }) => {
             
             <li
               key={index}
-              className=" flex flex-row items-center   text-lg "
+              className=" flex flex-row items-center   text-lg  "
             >
               {window.location.pathname === "/" ? (
                 <div className="flex   flex-row items-center  ">
@@ -69,7 +69,7 @@ export const Nav = ({ handleNav }) => {
                   >
                     <FontAwesomeIcon
                       icon={item.icon}
-                      className="rounded-full text-[#00df9a] border-2 border-[#00df9a] mr-2 text-lg p-2 bg-[#0D1321] cursor-pointer "
+                      className="rounded-full text-[#00df9a]  mr-2 text-lg md:text-xl p-2  cursor-pointer "
                     />
                   </LinkScroll>
                   <LinkScroll
@@ -77,8 +77,8 @@ export const Nav = ({ handleNav }) => {
                     smooth={true}
                     duration={500}
                     href={item.href}
-                    className="font-light tracking-wider font-[Poppins] text-white"
-                    onClick={() => setOpen(!open)}
+                    className="font-light tracking-wider  hover:text-[#00df9a]   md:text-xl duration-300 text-lg font-[Poppins] text-white"
+                    
                   >
                     {item.name}
                   </LinkScroll>
