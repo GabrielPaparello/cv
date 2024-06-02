@@ -17,7 +17,7 @@ export const Projects = ({
   return (
     <>
       <div
-        className={`text-center  text-white  relative  m-4 p-4 flex flex-col  justify-start items-center gap-2  `}
+        className={`text-center  text-white  relative  m-4  p-4 flex flex-col  justify-start items-center gap-16  `}
         onClick={() => {
           setActive(!active);
         }}
@@ -25,17 +25,19 @@ export const Projects = ({
         <h2
           className={`backFace text-2xl duration-[2s] font-serif tracking-wider  ${
             active ? "rotation3d" : ""
-          }   mb-4 `}
+          }   -mb-8 `}
         >
           {projectName}
         </h2>
+        <div className="h-[430px] w-[350px] ">
         <img
-          className={`backFace h-[430px] shadow-xl shadow-[#0D1321] rounded-2xl  w-[350px]  duration-[2s]  ${
+          className={`backFace shadow-xl shadow-[#0D1321] rounded-2xl block  max-w-[100%] h-auto object-cover  duration-[2s]  ${
             active ? "rotation3d" : ""
           } `}
           src={projectImg}
           alt="fotografía de proyecto"
         />
+        </div>
         <div
           className={`backFace  ${
             active ? "" : "rotationBack3d "
