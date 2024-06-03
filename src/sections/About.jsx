@@ -14,14 +14,14 @@ export const About = () => {
           </p>
         </section>
         <section className="ml-2 md:w-[400px] w-[360px]">
-          <h3 className="text-2xl mb-2 md:text-3xl text-[#00df9a]">Tecnologies</h3>
-          <p className="text-lg md:text-2xl font-serif ">
+          <h2 className="text-3xl mb-2 md:text-3xl text-[#00df9a]">Tecnologies</h2>
+          <p className="text-lg md:text-xl font-serif ">
             Currently my stack is: <br />
           </p>
-            <p className="font-bold text-md  font-sans text-[#d1ff00]  ">
+            <p className="font-bold text-lg  font-sans text-[#d1ff00]  ">
               HTML, CSS, JavaScript, React, Tailwind, Material UI, Git, Github.
             </p>
-          <p className="text-sm md:text-lg font-sans mt-2 w-[300px]">
+          <p className="text-md md:text-lg font-sans mt-2 w-[300px]">
             A  basic understanding of  <span className="text-[#d1ff00]">Node, Express,  Api
             Rest-full , Back end development ( http
             methods ) , and crud apps</span> 
