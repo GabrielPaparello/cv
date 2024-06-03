@@ -23,7 +23,7 @@ export const Projects = ({
         }}
       >
         <h2
-          className={`backFace text-2xl duration-[2s] font-serif tracking-wider  ${
+          className={`backFace  text-2xl duration-[1s] font-serif tracking-wider  ${
             active ? "rotation3d" : ""
           }   `}
         >
@@ -31,7 +31,7 @@ export const Projects = ({
         </h2>
         <div className="h-[430px] flex justify-center  w-[350px] ">
         <img
-          className={`backFace  shadow-xl shadow-[#0D1321] rounded-2xl block  max-w-[100%]  h-[430px] object-fill  duration-[2s]  ${
+          className={`backFace  shadow-xl shadow-[#0D1321] rounded-2xl block  max-w-[100%]  h-[430px] object-fill  duration-[1.5s]  ${
             active ? "rotation3d" : ""
           } `}
           src={projectImg}
@@ -41,7 +41,7 @@ export const Projects = ({
         <div
           className={`backFace  ${
             active ? "" : "rotationBack3d "
-          } duration-[2s] p-4  absolute  top-24  flex flex-col justify-center  gap-1 h-96 w-96`}
+          } duration-[1.5s] p-4  absolute  top-24  flex flex-col justify-center  gap-1 h-96 w-96`}
         >
           <div className="scale-90">
             <FontAwesomeIcon
@@ -79,10 +79,10 @@ export const Projects = ({
                 className={`${
                   ProjectDisabled
                     ? `pointer-events-none opacity-50 border-1 border-gray-200 text-gray-100 shadow-none`
-                    : ` border-yellow-600 `
-                } my-16 m-4 border-2   w-32 h-16 rounded-lg font-bold text-yellow-600 text-lg`}
+                    : ` border-yellow-600 text-yellow-600`
+                } my-16 m-4 border-2   w-32 h-16 rounded-lg font-bold  text-lg`}
               >
-                <a href={ProjectGit} className={``}>
+                <a href={ProjectGit} className={`hover:underline-offset-8 hover: hover:underline`}>
                   {" "}
                   View code{" "}
                 </a>

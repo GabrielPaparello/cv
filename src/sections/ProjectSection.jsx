@@ -25,7 +25,7 @@ export const ProjectSection = () => {
       </h2>
 
       </div>
-      <h2 className="mt-10  text-gray-400">Project order by most recent to oldest</h2>
+      <h2 className="mt-5  text-gray-600 text-xs">Project order by most recent to oldest</h2>
     <div id="Projects" className=" mt-24 flex flex-col md:flex-row md:flex-wrap justify-center align-middle items-center ">
       <Projects
         projectName={"Secret Santa"}
