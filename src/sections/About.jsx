@@ -13,15 +13,15 @@ export const About = () => {
             
           </p>
         </section>
-        <section className="md:w-[400px] w-[340px]">
-          <h3 className="text-xl md:text-3xl text-[#00df9a]">Tecnologies</h3>
-          <p className="text-lg md:text-2xl font-serif">
+        <section className="ml-2 md:w-[400px] w-[360px]">
+          <h3 className="text-2xl mb-2 md:text-3xl text-[#00df9a]">Tecnologies</h3>
+          <p className="text-lg md:text-2xl font-serif ">
             Currently my stack is: <br />
-            <span className="font-bold text-md  font-sans text-[#d1ff00]">
-              HTML, CSS, JavaScript, React, Tailwind, Material UI, Git, Github.
-            </span>
           </p>
-          <p className="text-sm md:text-lg font-sans md:mt-2">
+            <p className="font-bold text-md  font-sans text-[#d1ff00]  ">
+              HTML, CSS, JavaScript, React, Tailwind, Material UI, Git, Github.
+            </p>
+          <p className="text-sm md:text-lg font-sans mt-2 w-[300px]">
             A  basic understanding of  <span className="text-[#d1ff00]">Node, Express,  Api
             Rest-full , Back end development ( http
             methods ) , and crud apps</span> 
