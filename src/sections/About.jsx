@@ -3,10 +3,10 @@ export const About = () => {
     <div className="flex flex-row justify-center">
       <div className="text-white flex flex-col  md:flex-row  mt-10 text-start   ">
         <section className="w-[400px] md:w-[580px]">
-          <h2 className="text-2xl md:text-3xl font-serif text-[#00df9a] m-2"> About Me</h2>
+          <h2 className="text-3xl md:text-3xl font-serif text-[#00df9a] m-2"> About Me</h2>
           <p className="text-xl font-serif md:text-2xl m-2 pb-4 ">
             Im  passionate on learning how things work and how they can be improved.
-            <p className="mt-2 md:w-[400px] md:text-lg w-[345px] text-lg">
+            <p className="mt-2 md:w-[400px] md:text-lg w-[340px] text-lg">
             On the constant search for learning and improving my knowlegde, I consider myself a comunicative person and a responsabilities addict.
             
             </p>
