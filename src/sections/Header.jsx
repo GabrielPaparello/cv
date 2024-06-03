@@ -23,7 +23,7 @@ export const Header = () => {
             Front End <span className="text-[#FFC145]">Developer</span>
           </h2>
         </div>
-        <div className="bg-[#FFC145] md:relative md:left-[50vw] md:pr-10 md:w-[450px] rounded-3xl ">
+        <div className="bg-[#FFC145] md:relative md:left-[50vw] md:pr-10 md:w-[450px] rounded-3xl md:mt-10">
           <Lottie options={defaultOptions} height={350} width={350}/>
         </div>
 

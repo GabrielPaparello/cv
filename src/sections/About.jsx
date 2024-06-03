@@ -2,15 +2,12 @@ export const About = () => {
   return (
     <div className="flex flex-row justify-center">
       <div className="text-white flex flex-col  md:flex-row  mt-10 text-start   ">
-        <section className="w-[340px] md:w-[600px]">
+        <section className="w-[340px] md:w-[580px]">
           <h2 className="text-xl md:text-3xl font-serif text-[#00df9a] m-2"> About Me</h2>
-          <p className="text-md font-serif md:text-2xl m-2 pb-4">
-            Im a passionate and creative Front-End Developer 
-            crafting seamless and engaging user experiences.
-            <p className="md:mt-2 md:text-lg">
-            I specialize in
-            transforming ideas into interactive, responsive, and visually
-            stunning websites.
+          <p className="text-md font-serif md:text-2xl m-2 pb-4 ">
+            Im  passionate on learning how things work and how they can be improved.
+            <p className="md:mt-2 md:w-[400px] md:text-lg">
+            On the constant search for learning and improving my knowlegde, I consider myself a comunicative person and a responsabilities addict.
             
             </p>
             
@@ -30,6 +27,7 @@ export const About = () => {
             methods ) , and crud apps</span> 
           </p>
         </section>
+                
       </div>
     </div>
   );
