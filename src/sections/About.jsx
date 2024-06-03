@@ -2,11 +2,11 @@ export const About = () => {
   return (
     <div className="flex flex-row justify-center">
       <div className="text-white flex flex-col  md:flex-row  mt-10 text-start   ">
-        <section className="w-[340px] md:w-[580px]">
-          <h2 className="text-xl md:text-3xl font-serif text-[#00df9a] m-2"> About Me</h2>
-          <p className="text-md font-serif md:text-2xl m-2 pb-4 ">
+        <section className="w-[370px] md:w-[580px]">
+          <h2 className="text-2xl md:text-3xl font-serif text-[#00df9a] m-2"> About Me</h2>
+          <p className="text-xl font-serif md:text-2xl m-2 pb-4 ">
             Im  passionate on learning how things work and how they can be improved.
-            <p className="md:mt-2 md:w-[400px] md:text-lg">
+            <p className="mt-2 md:w-[400px] md:text-lg w-[300px]">
             On the constant search for learning and improving my knowlegde, I consider myself a comunicative person and a responsabilities addict.
             
             </p>
