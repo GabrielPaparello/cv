@@ -164,7 +164,7 @@ export const Nav = ({ handleNav }) => {
                   />
                   <a
                     href={item.href}
-                    className="ml-4 text-white"
+                    className="ml-4 text-bold text-white"
                     onClick={() => setOpen(!open)}
                   >
                     {item.name}
