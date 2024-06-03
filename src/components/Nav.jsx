@@ -113,7 +113,7 @@ export const Nav = ({ handleNav }) => {
         />
         
         <ul
-          className={`fixed text-lg flex justify-center  flex-row tracking-wider font-semibold ease-in-out text-start rounded-b-[80px] w-screen z-10 duration-700 bg-gradient-to-b from-[#0D1321] to-[#252b37] opacity-90 text-[#efc22b] bg-[#252b37]    p-3 pr-4 ${
+          className={`fixed text-lg flex justify-center  flex-row gap-2 items-center tracking-wider font-semibold ease-in-out text-start rounded-b-[80px] w-screen z-10 duration-700 bg-gradient-to-b from-[#0D1321] to-[#252b37] opacity-90 text-[#efc22b] bg-[#252b37]    p-3 pr-4 ${
             open ? "left-0 top-0" : "-top-96  -left-0 invisible "
           }`}
         >
@@ -122,7 +122,7 @@ export const Nav = ({ handleNav }) => {
             onClick={() => {
               setOpen(!open);
             }}
-            className="text-3xl -ml-6 mr-3 text-white cursor-pointer md:invisible"
+            className="text-2xl -ml-6 mr-10  -top-4 -left-10 relative bg-[#0D1321]  p-1 rounded-lg text-white cursor-pointer md:invisible"
           />
           {nav.map((item, index) => (
             
@@ -142,7 +142,7 @@ export const Nav = ({ handleNav }) => {
                   >
                     <FontAwesomeIcon
                       icon={item.icon}
-                      className="ml-2 mt-2 rounded-full text-[#00df9a] border-2 border-[#00df9a] text-2xl p-2 bg-[#0D1321] cursor-pointer "
+                      className="ml-2 mt-2 rounded-full text-[#00df9a] border border-[#00df9a]  p-2 bg-[#0D1321]  cursor-pointer "
                     />
                   </LinkScroll>
                   <LinkScroll
@@ -150,7 +150,7 @@ export const Nav = ({ handleNav }) => {
                     smooth={true}
                     duration={500}
                     href={item.href}
-                    className="pl-4 font-light tracking-wider font-[Poppins] text-white"
+                    className="pl-2 font-bold tracking-wider text-sm text-white"
                     onClick={() => setOpen(!open)}
                   >
                     {item.name}
@@ -172,7 +172,7 @@ export const Nav = ({ handleNav }) => {
                 </div>
               )}
               {item.name === "Contact" ? null : (
-                <div className="border-r-2 rounded-full h-9 border-[#7D8491]  mx-2 "></div>
+                <div className="border-r-2 rounded-full h-9 border-[#7D8491]  mx-8 "></div>
               )}
             </li>
           ))}

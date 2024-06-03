@@ -5,7 +5,7 @@ export const About = () => {
         <section className="w-[340px] md:w-[600px]">
           <h2 className="text-xl md:text-3xl font-serif text-[#00df9a] m-2"> About Me</h2>
           <p className="text-md font-serif md:text-2xl m-2 pb-4">
-            Im a passionate and creative Front-End Developer with a knack for
+            Im a passionate and creative Front-End Developer 
             crafting seamless and engaging user experiences.
             <p className="md:mt-2 md:text-lg">
             I specialize in
@@ -25,7 +25,7 @@ export const About = () => {
             </span>
           </p>
           <p className="text-sm md:text-lg font-sans md:mt-2">
-            A little bit of a basic understanding of this Tecnologies <span className="text-[#d1ff00]">Node, Express,  Api
+            A  basic understanding of  <span className="text-[#d1ff00]">Node, Express,  Api
             Rest-full , Back end development ( http
             methods ) , and crud apps</span> 
           </p>
