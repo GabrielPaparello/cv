@@ -1,0 +1,11 @@
+Model Information:
+* title:	explosion
+* source:	https://sketchfab.com/3d-models/explosion-1947033ff2d34875a7a88502a54d265a
+* author:	Scientist Broken 🤓👆 (https://sketchfab.com/ultra700cybercam)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "explosion" (https://sketchfab.com/3d-models/explosion-1947033ff2d34875a7a88502a54d265a) by Scientist Broken 🤓👆 (https://sketchfab.com/ultra700cybercam) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
