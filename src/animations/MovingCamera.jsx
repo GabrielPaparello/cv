@@ -1,8 +1,9 @@
 import { a, useSpring } from '@react-spring/three'
 import { PerspectiveCamera } from '@react-three/drei';
+import { useNavigate } from 'react-router-dom';
 const AnimatedPerspectiveCamera = a(PerspectiveCamera);
-export const MovingCamera = ({ props, isClicked, setFinished, handlelink}) => {
-  
+export const MovingCamera = ({ props, isClicked, setFinished, }) => {
+   const navigate = useNavigate();
       setFinished(true)
       const { positionz } = useSpring({
         
@@ -12,8 +13,8 @@ export const MovingCamera = ({ props, isClicked, setFinished, handlelink}) => {
            
             await next({positionz: [0, 0, 80], config: { duration: 1500 } });
             await new Promise((resolve) => setTimeout(resolve, 2000));
-            await next({ positionz: [0, 0, -87.90], config: { duration: 2000 } });
-            await new Promise((handlelink()));
+            await next({ positionz: [0, 0, -87.90],onRest: () => navigate('/home'), config: { duration: 2000 } });
+            // await new Promise((handlelink()));
           }
         },
         

@@ -39,10 +39,10 @@ function Astronaut() {
   
   
   
-    const handlelink = () => {
-      useNavigate('/home')
-      // ??
-    }
+    // const handlelink = () => {
+    //   useNavigate('/home')
+    //   // ??
+    // }
   
   return (
     <>
@@ -52,7 +52,7 @@ function Astronaut() {
           <Suspense fallback={null}>
             <Environment preset="night" />
             <ambientLight intensity={1} color={"white"} position={[0, 10, 0]} />
-            <MovingCamera handlelink={handlelink} props={Astro} isClicked={isClicked} setFinished={setFinished} />
+            <MovingCamera  props={Astro} isClicked={isClicked} setFinished={setFinished} />
             {finished ?  <Explosion position={[0, 0, -88]} scale={[10, 10, 10]}/>:''}
             {/* ASTRONAUTA Y ESTRELLAS */}
               <Planets position={[0, 0, -10]} />
