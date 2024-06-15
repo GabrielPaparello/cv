@@ -15,7 +15,7 @@ export const Nav = ({ open, setOpen }) => {
   const nav = [
     {
       name: "Home",
-      href: "/",
+      href: "/home",
       icon: faHome,
     },
 

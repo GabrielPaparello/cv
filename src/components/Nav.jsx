@@ -25,23 +25,23 @@ export const Nav = ({ handleNav }) => {
   const nav = [
     {
       name: "Home",
-      href: "/",
+      href: "/home",
       icon: faHome,
     },
 
     {
       name: "Projects",
-      href: "/",
+      href: "/home",
       icon: faBriefcase,
     },
     {
       name: "About",
-      href: "/",
+      href: "/home",
       icon: faUserAlt,
     },
     {
       name: "Contact",
-      href: "/",
+      href: "/home",
       icon: faEnvelope,
     },
   ];
@@ -57,7 +57,7 @@ export const Nav = ({ handleNav }) => {
               key={index}
               className=" flex flex-row items-center   text-lg  "
             >
-              {window.location.pathname === "/" ? (
+              {window.location.pathname === "/home" ? (
                 <div className="flex   flex-row items-center  ">
                   <LinkScroll
                     to={item.name}
@@ -130,7 +130,7 @@ export const Nav = ({ handleNav }) => {
               key={index}
               className=" flex flex-row items-center  text-md "
             >
-              {window.location.pathname === "/" ? (
+              {window.location.pathname === "/home" ? (
                 <div className="flex flex-col items-center">
                   <LinkScroll
                     to={item.name}
