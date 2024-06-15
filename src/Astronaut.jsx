@@ -24,7 +24,7 @@ function Astronaut() {
     useFrame((_state, delta) => {
       if (!isDone) {
         // eslint-disable-next-line no-unused-vars
-        let o = (ref.current.position.z += delta * 10);
+        let o = (ref.current.position.z += delta * 6);
         if (ref.current.position.z > 20 && !isDone) {
           let x = -1;
           let y = -2.5;
