@@ -25,7 +25,7 @@ export const Nav = ({ handleNav }) => {
   const nav = [
     {
       name: "Home",
-      href: "/home",
+      href: "/",
       icon: faHome,
     },
 
