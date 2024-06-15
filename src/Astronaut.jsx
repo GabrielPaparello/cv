@@ -12,7 +12,7 @@ import { Explosion } from './models/Explosion'
 import {AnimatedDiv} from './animations/AnimatedDiv'
 import { MovingCamera } from "./animations/MovingCamera";
 import { MovingStars } from "./animations/MovingStars";
-import { Navigate, useNavigate } from "react-router-dom";
+import { Navigate, useNavigate, useNavigationType } from "react-router-dom";
 function Astronaut() {
   // STATES
   const [isClicked,setIsClicked] = useState(false)
@@ -36,12 +36,14 @@ function Astronaut() {
     });
     return <group ref={ref}>{props.children}</group>;
   };
-  const NavigationHandler = () => {
-  const navigate = useNavigate();
-const handlelink = () => {
-  Navigate('/home')
-  // ??
-}
+  
+  
+  
+    const handlelink = () => {
+      useNavigate('/home')
+      // ??
+    }
+  
   return (
     <>
      <AnimatedDiv isDone={isDone} isClicked={isClicked} setIsClicked={setIsClicked}/>
