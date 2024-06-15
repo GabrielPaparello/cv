@@ -12,6 +12,7 @@ import { Explosion } from './models/Explosion'
 import {AnimatedDiv} from './animations/AnimatedDiv'
 import { MovingCamera } from "./animations/MovingCamera";
 import { MovingStars } from "./animations/MovingStars";
+import { Navigate } from "react-router-dom";
 function Astronaut() {
   // STATES
   const [isClicked,setIsClicked] = useState(false)
@@ -36,7 +37,7 @@ function Astronaut() {
     return <group ref={ref}>{props.children}</group>;
   };
 const handlelink = () => {
-  window.location.assign('/home')
+  Navigate('/home')
 }
   return (
     <>
