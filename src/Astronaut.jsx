@@ -40,6 +40,7 @@ function Astronaut() {
   const navigate = useNavigate();
 const handlelink = () => {
   Navigate('/home')
+  // ??
 }
   return (
     <>
