@@ -4,7 +4,7 @@ import { ProjectSection } from "./sections/ProjectSection";
 import { About } from "./sections/About";
 import { Contact } from "./sections/Contact";
 import { Footer } from "./sections/Footer";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Astronaut from "./Astronaut";
 import useLocalStorage from "./components/LocalStorage";
 export const App = () => {
@@ -17,7 +17,18 @@ export const App = () => {
   const [position, setPosition] = useState([-1, -2, -20]);
   const [finished, setFinished] = useState(false);
   const [show, setShow] = useLocalStorage('show', false);
-  
+
+  useEffect(() => {
+    const handleBeforeUnload = () => {
+      window.localStorage.removeItem('show');
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
+  }, []);
   return (
     <>
       <Astronaut isClicked={isClicked} isDone={isDone} position={position} finished={finished} show={show} setIsClicked={setIsClicked} setFinished={setFinished} setIsdone={setIsdone} setShow={setShow} setPosition={setPosition}/>
