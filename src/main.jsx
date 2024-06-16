@@ -12,8 +12,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Astronaut />} />
-        <Route path="/home" element={<App />} />
+        {/* <Route path="/" element={<Astronaut />} /> */}
+        <Route path="/" element={<App />} />
         <Route path="*" element={<App />} />
         <Route path="/InvisibleFriend" element={<InvisibleFriend />} />
         <Route path="/NumberAsigner" element={<NumberAsigner />} />

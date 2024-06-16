@@ -1,7 +1,7 @@
 import { useSpring } from "@react-spring/three";
 import { animated } from "@react-spring/web";
 
-export const AnimatedDiv = ({ isDone, isClicked, setIsClicked }) => {
+export const AnimatedDiv = ({ isDone, isClicked, setIsClicked, handleClick }) => {
 
   const animationProps = useSpring({
     to: {
@@ -34,7 +34,7 @@ export const AnimatedDiv = ({ isDone, isClicked, setIsClicked }) => {
       </animated.h1>
       <animated.button
         style={animationProps}
-        onClick={() => setIsClicked(true)}
+        onClick={handleClick}
         className="text-xl font-extralight text-nowrap absolute border py-1 px-4 rounded-md hover:bg-white hover:text-black hover:border-black hover:font-semibold hover:scale-125 text-white top-[30vh] md:top-[20vh] left-[50vw]"
       >
         Enter
