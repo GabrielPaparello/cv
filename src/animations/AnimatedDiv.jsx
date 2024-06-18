@@ -1,7 +1,8 @@
+/* eslint-disable react/prop-types */
 import { useSpring } from "@react-spring/three";
 import { animated } from "@react-spring/web";
 
-export const AnimatedDiv = ({ isDone, isClicked, setIsClicked, handleClick }) => {
+export const AnimatedDiv = ({ isDone, isClicked,  handleClick }) => {
 
   const animationProps = useSpring({
     to: {

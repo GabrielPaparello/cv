@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
 import { a, useSpring } from "@react-spring/three";
 import { PerspectiveCamera } from "@react-three/drei";
-import { useNavigate } from "react-router-dom";
+
 const AnimatedPerspectiveCamera = a(PerspectiveCamera);
 export const MovingCamera = ({ props, isClicked, setFinished }) => {
-  const navigate = useNavigate();
+  
   setFinished(true);
   const { positionz } = useSpring({
     from: { positionz: [0, 0, 7] },
@@ -14,7 +14,7 @@ export const MovingCamera = ({ props, isClicked, setFinished }) => {
         await new Promise((resolve) => setTimeout(resolve, 2000));
         await next({
           positionz: [0, 0, -87.9],
-          // onRest: () => navigate("/home"),
+          
           config: { duration: 2000 },
         });
       }

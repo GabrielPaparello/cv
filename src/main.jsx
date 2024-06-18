@@ -7,12 +7,11 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { InvisibleFriend } from './pages/invisibleApp/InvisibleFriend.jsx'
 import { NumberAsigner } from './pages/numberAsigner/invisibleApp/NumberAsigner.jsx'
 import  TicToe  from './pages/TicTacToe/TicToe.jsx'
-import Astronaut from './Astronaut.jsx'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        {/* <Route path="/" element={<Astronaut />} /> */}
+        
         <Route path="/" element={<App />} />
         <Route path="*" element={<App />} />
         <Route path="/InvisibleFriend" element={<InvisibleFriend />} />

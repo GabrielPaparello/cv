@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import {
   faBars,
   faBriefcase,
@@ -7,10 +8,9 @@ import {
   faUserAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
+
 import { Link } from "react-router-dom";
 import { Link as LinkScroll } from "react-scroll";
-
 export const Nav = ({ open, setOpen }) => {
   const nav = [
     {

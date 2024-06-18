@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import {
   faBars,
   faBriefcase,
@@ -8,19 +9,16 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { Link as LinkScroll } from "react-scroll";
 
 export const Nav = ({ handleNav }) => {
   const [open, setOpen] = useState(false);
 
-
   useEffect(() => {
-    if (handleNav === true){
-      setOpen(false);}
+    if (handleNav === true) {
+      setOpen(false);
+    }
   }, [handleNav]);
-
-
 
   const nav = [
     {
@@ -47,16 +45,12 @@ export const Nav = ({ handleNav }) => {
   ];
   return (
     <>
-      <nav className="invisible md:visible md:h-[80px] text-white flex mt-2 w-full font-semibold  z-10  bg-gradient-to-b  from-[#0D1321] to-[#252b37] opacity-80   justify-end items-center">
+      <nav className="invisible md:visible md:h-[50px] md:mb-[140px] text-white flex mt-2  z-10  bg-gradient-to-t  from-[#0D1321] to-[#252b37] opacity-80   justify-center items-center">
         <ul
-          className={` text-lg flex flex-row justify-center gap-4 mr-4 items-center font-semibold  `}
+          className={` text-base flex flex-row  gap-[150px] items-baseline `}
         >
           {nav.map((item, index) => (
-            
-            <li
-              key={index}
-              className=" flex flex-row items-center   text-lg  "
-            >
+            <li key={index} className=" flex flex-row items-center   ">
               {window.location.pathname === "/" ? (
                 <div className="flex   flex-row items-center  ">
                   <LinkScroll
@@ -69,7 +63,7 @@ export const Nav = ({ handleNav }) => {
                   >
                     <FontAwesomeIcon
                       icon={item.icon}
-                      className="rounded-full text-[#00df9a]  mr-2 text-lg md:text-xl p-2  cursor-pointer "
+                      className=" text-baseline text-lg md:text-lg pr-2 cursor-pointer "
                     />
                   </LinkScroll>
                   <LinkScroll
@@ -77,8 +71,7 @@ export const Nav = ({ handleNav }) => {
                     smooth={true}
                     duration={500}
                     href={item.href}
-                    className="font-light tracking-wider  hover:text-[#00df9a]   md:text-xl duration-300 text-lg font-[Poppins] text-white"
-                    
+                    className=" tracking-wider     md:text-xl duration-300 text-md font-[serif] text-[#acc045]"
                   >
                     {item.name}
                   </LinkScroll>
@@ -87,34 +80,34 @@ export const Nav = ({ handleNav }) => {
                 <div className="flex flex-row items-center">
                   <FontAwesomeIcon
                     icon={item.icon}
-                    className="ml-2 mt-2 rounded-full text-xl text-[#00df9a] border-2 border-[#00df9a]  p-2 bg-[#0D1321] cursor-pointer "
+                    className="text-baseline text-md md:text-md pr-2 cursor-pointer "
                   />
                   <a
                     href={item.href}
-                    className="ml-4 text-white"
+                    className=" text-[#acc045] "
                     onClick={() => setOpen(!open)}
                   >
                     {item.name}
                   </a>
                 </div>
               )}
-              
             </li>
           ))}
         </ul>
       </nav>
+      {/* mobile */}
       <nav className="xs:block m-2  ">
         <FontAwesomeIcon
           icon={faBars}
           onClick={() => {
             setOpen(!open);
           }}
-          className="text-3xl fixed top-2 z-10 bg-[#0D1321]  p-1 rounded-lg text-white cursor-pointer md:invisible"
+          className={`text-3xl fixed top-2 z-10 bg-[#0D1321]  p-1 rounded-lg text-white cursor-pointer  md:invisible duration-500 ${!open ? '':'invisible'}`}
         />
-        
+
         <ul
-          className={`fixed text-lg flex justify-center  flex-row items-center tracking-wider font-semibold ease-in-out text-start rounded-b-[80px] w-screen z-10 duration-700 bg-gradient-to-b from-[#0D1321] to-[#252b37] opacity-90 text-[#efc22b] bg-[#252b37]    p-3 pr-4 ${
-            open ? "left-0 top-0" : "-top-96  -left-0 invisible "
+          className={`fixed  flex justify-center  flex-col items-start tracking-wider  ease-in-out text-base rounded-md w-[130px] z-10 duration-700 bg-gradient-to-b from-[#0D1321] to-[#252b37]  text-[#f5f5f5] bg-[#252b37] p-3 pr-4 ${
+            open ? "left-0 top-0" : "-top-0  -left-96 invisible "
           }`}
         >
           <FontAwesomeIcon
@@ -122,16 +115,12 @@ export const Nav = ({ handleNav }) => {
             onClick={() => {
               setOpen(!open);
             }}
-            className="text-2xl    -top-6 relative bg-[#0D1321] -left-2  p-1 rounded-lg text-white cursor-pointer md:invisible"
+            className="text-xl    left-20 relative bg-[#0D1321] -top-0  p-1 rounded-lg text-white cursor-pointer md:invisible"
           />
           {nav.map((item, index) => (
-            
-            <li
-              key={index}
-              className=" flex flex-row items-center  text-md "
-            >
+            <li key={index} className=" flex flex-col items-center  text-md ">
               {window.location.pathname === "/" ? (
-                <div className="flex flex-col items-center">
+                <div className="flex flex-row w-[100px] border-[#3d4543] border-b p-2 items-baseline">
                   <LinkScroll
                     to={item.name}
                     smooth={true}
@@ -142,7 +131,7 @@ export const Nav = ({ handleNav }) => {
                   >
                     <FontAwesomeIcon
                       icon={item.icon}
-                      className=" mt-2 rounded-full text-[#00df9a] border border-[#00df9a]  p-2 bg-[#0D1321]  cursor-pointer "
+                      className=" mr-2 rounded-full    cursor-pointer "
                     />
                   </LinkScroll>
                   <LinkScroll
@@ -150,7 +139,7 @@ export const Nav = ({ handleNav }) => {
                     smooth={true}
                     duration={500}
                     href={item.href}
-                    className="pl-1 font-bold tracking-wider text-sm text-white"
+                    className="tracking-wider text-sm text-[#c4c930]"
                     onClick={() => setOpen(!open)}
                   >
                     {item.name}
@@ -171,13 +160,12 @@ export const Nav = ({ handleNav }) => {
                   </a>
                 </div>
               )}
-              {item.name === "Contact" ? null : (
-                <div className="border-r-2 rounded-full h-9 border-[#7D8491]  mx-3 "></div>
-              )}
+              
             </li>
           ))}
         </ul>
       </nav>
+      {/* mobile */}
     </>
   );
 };
