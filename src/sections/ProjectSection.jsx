@@ -5,6 +5,7 @@ import project3 from "../assets/project3.png";
 import project4 from "../assets/project4.png";
 import animationData from "../assets/animation3.json";
 import Lottie from "react-lottie";
+import '../App.css'
 export const ProjectSection = () => {
   const defaultOptions = {
     
@@ -16,10 +17,10 @@ export const ProjectSection = () => {
     },
   };
   return (
-    <div className="bg-gradient-to-t mt-24 flex flex-col justify-center align-middle items-center from-[#252b37] to-[#0D1321]">
+    <div className="bg-gradient-to-t mt-[100px] flex flex-col justify-center align-middle items-center from-[#252b37] to-[#0D1321]">
     
       <div className="bg-black bg-opacity-50 rounded-full w-[300px] h-[300px] md:w-[500px] md:h-[500px]">
-      <h2 className="text-4xl font-serif text-center    text-[#F7AB0A]  tracking-wider ">
+      <h2 className="text-4xl md:text-7xl roboto text-center    text-[#45b5ff]  tracking-wider ">
           Projects
           {window.innerWidth < 768 ? <Lottie options={defaultOptions} height={250} width={250} /> : <Lottie options={defaultOptions} height={500} width={500} />}
       
@@ -27,7 +28,7 @@ export const ProjectSection = () => {
 
       </div>
       <h2 className="mt-5  text-gray-600 text-xs">Project order by most recent to oldest</h2>
-    <div id="Projects" className="mt-24 flex flex-col md:flex-row md:flex-wrap justify-center align-middle items-center ">
+    <div id="PROJECTS" className="mt-24 flex flex-col md:flex-row md:flex-wrap justify-center align-middle items-center ">
       <Projects
         projectName={"Secret Santa"}
         projectImg={project1}

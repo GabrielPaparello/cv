@@ -10,7 +10,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
 import { Link as LinkScroll } from "react-scroll";
-
+import '../App.css'
 export const Nav = ({ handleNav }) => {
   const [open, setOpen] = useState(false);
 
@@ -22,33 +22,31 @@ export const Nav = ({ handleNav }) => {
 
   const nav = [
     {
-      name: "Home",
+      name: "HOME",
       href: "/",
       icon: faHome,
     },
 
     {
-      name: "Projects",
+      name: "PROJECTS",
       href: "/",
       icon: faBriefcase,
     },
     {
-      name: "About",
+      name: "ABOUT",
       href: "/",
       icon: faUserAlt,
     },
     {
-      name: "Contact",
+      name: "CONTACT",
       href: "/",
       icon: faEnvelope,
     },
   ];
   return (
     <>
-      <nav className="invisible md:visible md:h-[50px] md:mb-[140px] text-white flex mt-2  z-10  bg-gradient-to-t  from-[#0D1321] to-[#252b37] opacity-80   justify-center items-center">
-        <ul
-          className={` text-base flex flex-row  gap-[150px] items-baseline `}
-        >
+      <nav className="invisible  md:visible md:h-[50px] md:mb-[140px] text-white flex   z-10   justify-center items-center">
+        <ul className={` text-base flex flex-row  gap-[150px] items-baseline `}>
           {nav.map((item, index) => (
             <li key={index} className=" flex flex-row items-center   ">
               {window.location.pathname === "/" ? (
@@ -58,10 +56,11 @@ export const Nav = ({ handleNav }) => {
                     smooth={true}
                     duration={500}
                     href={item.href}
-                    className=""
+                    className="navFont"
                     onClick={() => setOpen(!open)}
                   >
                     <FontAwesomeIcon
+                      listItem
                       icon={item.icon}
                       className=" text-baseline text-lg md:text-lg pr-2 cursor-pointer "
                     />
@@ -71,7 +70,7 @@ export const Nav = ({ handleNav }) => {
                     smooth={true}
                     duration={500}
                     href={item.href}
-                    className=" tracking-wider     md:text-xl duration-300 text-md font-[serif] text-[#acc045]"
+                    className=" tracking-wide     md:text-xl duration-300 text-md  text-white"
                   >
                     {item.name}
                   </LinkScroll>
@@ -84,7 +83,7 @@ export const Nav = ({ handleNav }) => {
                   />
                   <a
                     href={item.href}
-                    className=" text-[#acc045] "
+                    className=" text-white navFont"
                     onClick={() => setOpen(!open)}
                   >
                     {item.name}
@@ -95,6 +94,8 @@ export const Nav = ({ handleNav }) => {
           ))}
         </ul>
       </nav>
+
+      
       {/* mobile */}
       <nav className="xs:block m-2  ">
         <FontAwesomeIcon
@@ -102,11 +103,13 @@ export const Nav = ({ handleNav }) => {
           onClick={() => {
             setOpen(!open);
           }}
-          className={`text-3xl fixed top-2 z-10 bg-[#0D1321]  p-1 rounded-lg text-white cursor-pointer  md:invisible duration-500 ${!open ? '':'invisible'}`}
+          className={`text-3xl fixed top-2 z-10 bg-[#0D1321]  p-1 rounded-lg text-white cursor-pointer  md:invisible duration-500 ${
+            !open ? "" : "invisible"
+          }`}
         />
 
         <ul
-          className={`fixed  flex justify-center  flex-col items-start tracking-wider  ease-in-out text-base rounded-md w-[130px] z-10 duration-700 bg-gradient-to-b from-[#0D1321] to-[#252b37]  text-[#f5f5f5] bg-[#252b37] p-3 pr-4 ${
+          className={`fixed  flex justify-center  flex-col items-start tracking-widest  ease-in-out text-base rounded-md w-[130px] z-10 duration-700 bg-gradient-to-b from-[#0D1321] to-[#252b37]  text-[#f5f5f5] bg-[#252b37] p-3 pr-4 ${
             open ? "left-0 top-0" : "-top-0  -left-96 invisible "
           }`}
         >
@@ -139,7 +142,7 @@ export const Nav = ({ handleNav }) => {
                     smooth={true}
                     duration={500}
                     href={item.href}
-                    className="tracking-wider text-sm text-[#c4c930]"
+                    className="tracking-widest text-sm text-[#c4c930]"
                     onClick={() => setOpen(!open)}
                   >
                     {item.name}
@@ -160,7 +163,6 @@ export const Nav = ({ handleNav }) => {
                   </a>
                 </div>
               )}
-              
             </li>
           ))}
         </ul>

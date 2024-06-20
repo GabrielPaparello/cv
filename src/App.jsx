@@ -11,7 +11,7 @@ export const App = () => {
   const [isDone, setIsdone] = useState(false);
   const [position, setPosition] = useState([-1, -2, -20]);
   const [finished, setFinished] = useState(false);
-  const [show, setShow] = useLocalStorage("show", false);
+  const [show, setShow] = useLocalStorage("show", true);
 
   useEffect(() => {
     const handleBeforeUnload = () => {
@@ -26,8 +26,8 @@ export const App = () => {
   }, []);
   return (
     <>
-      <div className={`${
-        !show ? "" : "hidden"}`}>
+      {/* <div className={`${ */}
+        {/* !show ? "" : "hidden"}`}> */}
       <Astronaut 
         isClicked={isClicked}
         isDone={isDone}
@@ -40,7 +40,8 @@ export const App = () => {
         setShow={setShow}
         setPosition={setPosition}
       />
-      </div>
+      {/* </div> */}
+      
       <Portfolio show={show} setHandleNav={setHandleNav} handleNav={handleNav}/>
     </>
   );

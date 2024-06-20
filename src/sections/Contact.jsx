@@ -24,7 +24,7 @@ export const Contact = () => {
   };
   return (
     <div
-      id="Contact"
+      id="CONTACT"
       className="flex flex-col content-center mt-10  justify-center  items-center  "
     >
       <form
