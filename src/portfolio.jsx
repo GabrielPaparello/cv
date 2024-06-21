@@ -22,11 +22,17 @@ export const Portfolio = ({ show, setHandleNav, handleNav }) => {
     }
   };
 
-  const handleNextScroll1 = (a) => {
-    const nextPage = (currentPage + 1) % 4;
-    ref.current.scrollTo(nextPage);
-    setCurrentPage(nextPage);
-  };
+  const handleNextScroll1 = () => {
+    if (currentPage == 2) {
+      const nextPage = (currentPage + 2) % 5;
+      ref.current.scrollTo(nextPage);
+      setCurrentPage(nextPage);
+    } else {
+      const nextPage = (currentPage + 1) % 5;
+      ref.current.scrollTo(nextPage);
+      setCurrentPage(nextPage);
+    }
+};
 
   useEffect(() => {
     const handleScroll = (e) => {
@@ -91,15 +97,15 @@ export const Portfolio = ({ show, setHandleNav, handleNav }) => {
 
   return (
     <div className={`overflow-x-hidden  ${show ? "" : "hidden"} `}>
-      <Parallax pages={4} ref={ref}>
+      <Parallax pages={5} ref={ref}>
         <ParallaxLayer
-          sticky={{ start: 0, end: 4 }}
+          sticky={{ start: 0, end: 5 }}
           style={{ zIndex: 0, width: "10vw", height: "10vh" }}
         >
           <Nav handleNav={handleNav} handleNextScroll={handleNextScroll} />
           <div onClick={() => setHandleNav(!handleNav)}>
             <button onClick={handleNextScroll1}>
-              {currentPage != 3 ? (
+              {currentPage != 4 ? (
                 <FontAwesomeIcon
                   icon={faArrowAltCircleDown}
                   size="4x"
@@ -115,7 +121,7 @@ export const Portfolio = ({ show, setHandleNav, handleNav }) => {
             </button>
           </div>
         </ParallaxLayer>
-        <ParallaxLayer sticky={{ start: 0, end: 4 }} style={{ zIndex: -2 }}>
+        <ParallaxLayer sticky={{ start: 0, end: 5 }} style={{ zIndex: -2 }}>
           <div>
             <video
               className="absolute -z-10 left-[0vw] top-[0vh] backdrop-filter backdrop-blur-3xl video "
@@ -127,25 +133,25 @@ export const Portfolio = ({ show, setHandleNav, handleNav }) => {
             </video>
           </div>
         </ParallaxLayer>
-        <ParallaxLayer offset={0} factor={1} speed={4} style={{ zIndex: 0 }}>
+        <ParallaxLayer offset={0} factor={1} speed={2} style={{ zIndex: 0 }}>
           {/* <Nav handleNav={handleNav} />
         <div onClick={() => setHandleNav(!handleNav)}> */}
           <Header handleNextScroll={handleNextScroll} ref={ref} />
           {/* </div> */}
         </ParallaxLayer>
-        <ParallaxLayer offset={1} factor={1} speed={4}>
+        <ParallaxLayer offset={1} factor={1} speed={2}>
           {/* <Nav handleNav={handleNav} /> */}
           {/* <div onClick={() => setHandleNav(!handleNav)}> */}
           <About />
           {/* </div> */}
         </ParallaxLayer>
-        <ParallaxLayer offset={2} speed={4}>
+        <ParallaxLayer offset={2} speed={2}>
           {/* <Nav handleNav={handleNav} /> */}
           {/* <div onClick={() => setHandleNav(!handleNav)}> */}
           <ProjectSection />
           {/* </div> */}
         </ParallaxLayer>
-        <ParallaxLayer offset={3} factor={1} speed={4}>
+        <ParallaxLayer offset={4} factor={1} speed={2}>
           {/* <Nav handleNav={handleNav} /> */}
           {/* <div onClick={() => setHandleNav(!handleNav)}> */}
           <Contact />

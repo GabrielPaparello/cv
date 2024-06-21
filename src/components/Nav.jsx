@@ -46,7 +46,7 @@ export const Nav = ({ handleNav, handleNextScroll }) => {
       name: "CONTACT",
       href: "/",
       icon: faEnvelope,
-      to: 3
+      to: 4
     },
   ];
    const handleClick = (a) => {
