@@ -1,8 +1,7 @@
 import Lottie from "react-lottie";
 import animationData from "../assets/Animation.json";
 import { Link as LinkScroll } from "react-scroll";
-import  video  from "../assets/bgVideo.mp4";
-export const Header = () => {
+export const Header = ({handleNextScroll}) => {
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -19,7 +18,7 @@ export const Header = () => {
     <>
       <div
         id="HOME"
-        className="text-center md:text-start m-2 p-2 md:p-0  items-center  flex flex-col  text-white mb-[200px]  "
+        className="text-center md:text-start m-2 p-2 md:p-0  items-center  flex flex-col mt-[200px]  text-white mb-[200px]  "
       >
         <div className="flex md:flex-row  md:gap-[100px] flex-col items-center ">
         
@@ -28,11 +27,7 @@ export const Header = () => {
           <h2 className="text-2xl md:text-6xl  m-2 pb-4"> Front End <span className="text-[#6b4de5]">Developer</span>
           </h2>
           </div>
-          <div>
-          <video className="absolute -z-10 left-[0vw] top-[0vh] backdrop-filter backdrop-blur-3xl video " loop autoPlay muted >
-            <source src={video} type="video/mp4" />
-          </video>
-          </div>
+         
           {/* <div className="bg-[#45b5ff] rounded-3xl ">
             {window.innerWidth < 768 ? <Lottie options={defaultOptions} height={350} width={340}/> :<Lottie options={defaultOptions} height={500} width={600}/>}
           
@@ -46,12 +41,12 @@ export const Header = () => {
         </h2>
         <div className="m-2 md:text-center text-xl ">
           <LinkScroll to='Projects' smooth={true} duration={500}>
-          <button className="border-2 hover:scale-110 duration-300 border-[#45b5ff] text-[#45b5ff] px-4 py-2 rounded-lg">
+          <button onClick={() => handleNextScroll(2)} className="border-2 hover:scale-110 duration-300 border-[#45b5ff] text-[#45b5ff] px-4 py-2 rounded-lg">
             See my Work
           </button>
           </LinkScroll>
           <LinkScroll to='Contact' smooth={true} duration={500}>
-          <button className="bg-[#0d588a] border-2 border-[#45b5ff] px-4 py-2 rounded-lg m-4 hover:scale-110 hover:font-bold duration-300">
+          <button onClick={() => handleNextScroll(3)} className="bg-[#0d588a] border-2 border-[#45b5ff] px-4 py-2 rounded-lg m-4 hover:scale-110 hover:font-bold duration-300">
             Contact Me
           </button>
           </LinkScroll>

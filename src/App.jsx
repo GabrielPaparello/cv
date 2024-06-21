@@ -11,7 +11,7 @@ export const App = () => {
   const [isDone, setIsdone] = useState(false);
   const [position, setPosition] = useState([-1, -2, -20]);
   const [finished, setFinished] = useState(false);
-  const [show, setShow] = useLocalStorage("show", false);
+  const [show, setShow] = useLocalStorage("show", true);
 
   useEffect(() => {
     const handleBeforeUnload = () => {
