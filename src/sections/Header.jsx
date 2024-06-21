@@ -41,7 +41,7 @@ export const Header = ({handleNextScroll}) => {
         </h2>
         <div className="m-2 md:text-center text-xl ">
           <LinkScroll to='Projects' smooth={true} duration={500}>
-          <button onClick={() => handleNextScroll(2)} className="border-2 hover:scale-110 duration-300 border-[#45b5ff] text-[#45b5ff] px-4 py-2 rounded-lg">
+          <button onClick={() => handleNextScroll(2)} className="border-2 hover:scale-110 duration-300 border-[#45b5ff] text-[#45b5ff] px-4 py-2 mt-10 md:mt-0 rounded-lg">
             See my Work
           </button>
           </LinkScroll>

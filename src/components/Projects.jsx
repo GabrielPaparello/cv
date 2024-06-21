@@ -23,7 +23,7 @@ export const Projects = ({
         }}
       >
         <h2
-          className={`backFace  text-2xl duration-[1s] font-serif tracking-wider  ${
+          className={`backFace  text-2xl duration-[1s] roboto tracking-wider  ${
             active ? "rotation3d" : ""
           }   `}
         >
@@ -51,19 +51,19 @@ export const Projects = ({
             />
             <section>
               <h2
-                className={`text-2xl font-serif tracking-wider ${
+                className={`text-2xl roboto tracking-wider ${
                   active ? "" : "opacity-100"
                 }   mb-4 `}
               >
                 {projectName}
               </h2>
-              <h2 className="text-3xl  text-[#F7AB0A] text-start font-semibold -pt-20 pb-7">
+              <h2 className="text-3xl  text-[#6b4de5] text-start font-semibold -pt-20 pb-7">
                 Description
               </h2>
               <p className="text-center  text-lg">{ProjectDescription}</p>
             </section>
             <section>
-              <h2 className="text-2xl  text-[#F7AB0A] text-start font-semibold py-5 ">
+              <h2 className="text-2xl  text-[#45b5ff] text-start font-semibold py-5 ">
                 Tecnologies used
               </h2>
               <p className="text-center text-lg">{ProjectTechnologies}</p>
@@ -79,7 +79,7 @@ export const Projects = ({
                 className={`${
                   ProjectDisabled
                     ? `pointer-events-none opacity-50 border-1 border-gray-200 text-gray-100 shadow-none`
-                    : ` border-yellow-600 text-yellow-600`
+                    : ` border-[#6b4de5] text-[#45b5ff]`
                 } my-16 m-4 border-2   w-32 h-16 rounded-lg font-bold  text-lg`}
               >
                 <a href={ProjectGit} className={`hover:underline-offset-8 hover: hover:underline`}>
@@ -87,7 +87,7 @@ export const Projects = ({
                   View code{" "}
                 </a>
               </button>
-              <button className="my-16  bg-yellow-600 w-32 h-16 rounded-lg font-bold text-lg cursor-pointer  hover:scale-110 text-white">
+              <button className="my-16  bg-[#0d588a] w-32 h-16 rounded-lg font-bold text-lg cursor-pointer  hover:scale-110 text-white">
                 <Link to={ProjectLink}>Try the app</Link>
               </button>
             </div>

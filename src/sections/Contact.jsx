@@ -72,7 +72,7 @@ export const Contact = () => {
           className="p-2 rounded-xl text-start bg-gray-200"
         />
         <button
-          className="ml-[50px] bg-black border-2 border-[#b47c03] text-[#F7AB0A] font-bold text-md hover:bg-[#F7AB0A] hover:text-black w-[200px]  p-2 rounded-xl"
+          className="ml-[50px] bg-black border-2 border-[#45b5ff] text-white font-bold text-md hover:bg-[#45b5ff] hover:text-black w-[200px]  p-2 rounded-xl"
           type="submit"
         >
           Enviar

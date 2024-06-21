@@ -45,12 +45,12 @@ export const Footer = () => {
   ];
   return (
     <>
-      <div className="d pt-1">
-        <h3 className="text-center text-sm md:text-base   footerGray ">
+      <div className="d pt-[100px] md:pt-[250px]">
+        <h3 className="text-center text-sm md:text-xl   footerGray ">
           Information
         </h3>
         <div className="flex list-none flex-row justify-around mt-4 ">
-          <div className="flex flex-col items-start mt-4 text-xs md:text-sm grayText">
+          <div className="flex flex-col items-start mt-4 text-md mr-10 md:text-lg grayText">
             {footer.map((footerLinks) => (
               <li key={footerLinks.link}>
                 {footerLinks.icon === "about" && (
@@ -67,7 +67,7 @@ export const Footer = () => {
             ))}
           </div>
 
-          <div className="flex flex-col items-start mt-4 text-xs md:text-sm grayText ">
+          <div className="flex flex-col items-start mt-4 text-sm md:text-lg grayText ">
             {footer2.map((footerLinks) => (
               <li key={footerLinks.link}>
                 {footerLinks.icon === "link" && (
@@ -84,7 +84,7 @@ export const Footer = () => {
             ))}
           </div>
         </div>
-        <h3 className="text-center mt-5 text-sm footerGray ">
+        <h3 className="text-center mt-5 text-sm md:text-lg footerGray ">
           Copyright {new Date().getFullYear()}
         </h3>
       </div>
