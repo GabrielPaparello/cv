@@ -45,19 +45,16 @@ export const AnimatedDiv = ({ isDone, isClicked,  handleClick }) => {
         style={{ 
           ...animationProps2, 
           transformOrigin: 'top', 
-          fontSize: '40px',
           color: 'white',
           position: 'absolute',
-          top: '30vh',
-          left: '60vw',
-        }} className="roboto-thin tracking-wide text-white text-nowrap font-extralight absolute ">
+        }} className="roboto-thin tracking-wide text-white text-nowrap font-extralight absolute top-[20vh] left-[40vw] text-3xl md:top-[30vh] md:left-[60vw] md:text-[40px]">
         Start journey
       </animated.h1>
       <animated.button
         style={animationProps} 
         onClick={handleClick}
-        className="absolute py-4 px-4 border border-white rounded-full cursor-pointer top-[30vh] md:top-[50vh] left-[65vw]"
-      ><FontAwesomeIcon beatFade={false} size="5x"  icon={faPlay}  className="text-white pl-4 ">Start</FontAwesomeIcon> 
+        className="absolute py-4 px-4 border border-white rounded-full cursor-pointer top-[35vh] md:top-[50vh] left-[55vw] md:left-[65vw]"
+      ><FontAwesomeIcon beatFade={false} size="4x"  icon={faPlay}  className="text-white pl-4 ">Start</FontAwesomeIcon> 
       </animated.button>
        
     </div>
