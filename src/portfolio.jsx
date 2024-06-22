@@ -117,7 +117,7 @@ export const Portfolio = ({ setHandleNav, handleNav }) => {
           </div>
         </ParallaxLayer>
         <ParallaxLayer offset={0} style={{ position: "absolute", zIndex: -1 }}>
-          <SateliteRender />
+          {/* <SateliteRender /> */}
         </ParallaxLayer>
         <ParallaxLayer sticky={{ start: 0, end: 5 }} style={{ zIndex: -2 }}>
           <video className="absolute -z-10 left-[0vw] top-[0vh] backdrop-filter backdrop-blur-3xl video" loop autoPlay muted>
