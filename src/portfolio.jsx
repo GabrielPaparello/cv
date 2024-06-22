@@ -24,11 +24,11 @@ export const Portfolio = ({ show, setHandleNav, handleNav }) => {
 
   const handleNextScroll1 = () => {
     if (currentPage == 2) {
-      const nextPage = (currentPage + 2) % 5;
+      const nextPage = (currentPage + 2) % 6;
       ref.current.scrollTo(nextPage);
       setCurrentPage(nextPage);
     } else {
-      const nextPage = (currentPage + 1) % 5;
+      const nextPage = (currentPage + 1) % 6;
       ref.current.scrollTo(nextPage);
       setCurrentPage(nextPage);
     }
@@ -47,7 +47,7 @@ export const Portfolio = ({ show, setHandleNav, handleNav }) => {
         }
       } else {
         // Scroll up
-        if (currentPage > 0) {
+        if (currentPage > 0 && currentPage != 2) {
           setCurrentPage((prevPage) => {
             const nextPage = prevPage - 1;
             ref.current.scrollTo(nextPage);
@@ -65,7 +65,7 @@ export const Portfolio = ({ show, setHandleNav, handleNav }) => {
       const touchEndY = e.changedTouches[0].clientY;
       if (touchStartY - touchEndY > 50) {
         // Swipe up
-        if (currentPage < 2) {
+        if (currentPage < 2 && currentPage != 2) {
           setCurrentPage((prevPage) => {
             const nextPage = prevPage + 1;
             ref.current.scrollTo(nextPage);
@@ -74,7 +74,7 @@ export const Portfolio = ({ show, setHandleNav, handleNav }) => {
         }
       } else if (touchEndY - touchStartY > 50) {
         // Swipe down
-        if (currentPage > 0) {
+        if (currentPage > 0 && currentPage != 2) {
           setCurrentPage((prevPage) => {
             const nextPage = prevPage - 1;
             ref.current.scrollTo(nextPage);
@@ -97,7 +97,7 @@ export const Portfolio = ({ show, setHandleNav, handleNav }) => {
 
   return (
     <div className={`overflow-x-hidden  ${show ? "" : "hidden"} `}>
-      <Parallax pages={5} ref={ref}>
+      <Parallax pages={6} ref={ref}>
         <ParallaxLayer
           sticky={{ start: 0, end: 5 }}
           style={{ zIndex: 0, width: "10vw", height: "10vh" }}
@@ -133,25 +133,25 @@ export const Portfolio = ({ show, setHandleNav, handleNav }) => {
             </video>
           </div>
         </ParallaxLayer>
-        <ParallaxLayer offset={0} factor={1} speed={2} style={{ zIndex: 0 }}>
+        <ParallaxLayer offset={0} factor={1} speed={1} style={{ zIndex: 0 }}>
           {/* <Nav handleNav={handleNav} />
         <div onClick={() => setHandleNav(!handleNav)}> */}
           <Header handleNextScroll={handleNextScroll} ref={ref} />
           {/* </div> */}
         </ParallaxLayer>
-        <ParallaxLayer offset={1} factor={1} speed={2}>
+        <ParallaxLayer offset={1} factor={1} speed={1}>
           {/* <Nav handleNav={handleNav} /> */}
           {/* <div onClick={() => setHandleNav(!handleNav)}> */}
           <About />
           {/* </div> */}
         </ParallaxLayer>
-        <ParallaxLayer offset={2} speed={2}>
+        <ParallaxLayer offset={2} speed={1}>
           {/* <Nav handleNav={handleNav} /> */}
           {/* <div onClick={() => setHandleNav(!handleNav)}> */}
           <ProjectSection />
           {/* </div> */}
         </ParallaxLayer>
-        <ParallaxLayer offset={4} factor={1} speed={2}>
+        <ParallaxLayer offset={5} factor={1} speed={1}>
           {/* <Nav handleNav={handleNav} /> */}
           {/* <div onClick={() => setHandleNav(!handleNav)}> */}
           <Contact />
