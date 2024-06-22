@@ -128,7 +128,7 @@ export const Nav = ({ handleNav, handleNextScroll }) => {
             onClick={() => {
               setOpen(!open);
             }}
-            className="text-xl    left-20 relative bg-[#0D1321] -top-0  p-1 rounded-lg text-white cursor-pointer md:invisible"
+            className="text-xl    left-20 relative bg-[#0D1321] -top-0  p-1 rounded-lg text-white cursor-pointer "
           />
           {nav.map((item, index) => (
             <li key={index} className=" flex flex-col items-center  text-md ">
