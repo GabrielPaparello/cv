@@ -24,7 +24,7 @@ export const Portfolio = ({ show, setHandleNav, handleNav }) => {
 
   const handleNextScroll1 = () => {
     if (currentPage == 2) {
-      const nextPage = (currentPage + 2) % 6;
+      const nextPage = (currentPage + 3) % 6;
       ref.current.scrollTo(nextPage);
       setCurrentPage(nextPage);
     } else {
