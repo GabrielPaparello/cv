@@ -9,15 +9,15 @@ export const PlayerData = ({ playerData }) => {
           Datos del Participante
         </h2>
         <h2 className="text-md md:text-lg font-sans  font-semibold text-white text-start pl-6 ">
-          Nombre
+          Nombres
         </h2>
         <textarea
-          className="resize-none mx-7 text-sm md:text-md text-center font-bold h-10 rounded-md p-2 border-2 border-current hover:border-black "
+          className="resize-none mx-7 text-sm md:text-md text-center font-bold h-[150px] rounded-md p-2 border-2 border-current hover:border-black "
           name="nombre"
           id=""
           cols="20"
           rows="1"
-          placeholder="   Inserte su nombre"
+          placeholder="   Inserte participantes separados por un espacio"
           autoComplete="on"
           required
         ></textarea>

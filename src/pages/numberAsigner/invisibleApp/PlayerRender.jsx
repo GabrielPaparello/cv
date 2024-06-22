@@ -23,7 +23,7 @@ const PlayerRender = ({
         <div className="flex justify-center flex-wrap my-2">
           {nombre.map((jugador, index) => (
             <div
-              key={index}
+              key={jugador}
               className={`${
                 disabled ? color : color
               }  rounded-md my-5 mx-2 p-2 font-sans font-semibold text-lg max-w-max min-w-16  min-h-12 text-center text-black  shadow-outline shadow-2xl`}

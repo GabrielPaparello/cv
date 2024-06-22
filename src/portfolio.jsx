@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import { Nav } from "./components/Nav";
 import { Header } from "./sections/Header";
 import { ProjectSection } from "./sections/ProjectSection";
@@ -10,6 +11,9 @@ import { useEffect, useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowAltCircleDown } from "@fortawesome/free-regular-svg-icons";
 import { faArrowAltCircleUp } from "@fortawesome/free-solid-svg-icons";
+import { Canvas } from "@react-three/fiber";
+import { Astro1 } from "./models/Astro1";
+import { Rocket } from "./models/Rocket";
 
 export const Portfolio = ({ show, setHandleNav, handleNav }) => {
   const [currentPage, setCurrentPage] = useState(0);
@@ -32,82 +36,86 @@ export const Portfolio = ({ show, setHandleNav, handleNav }) => {
       ref.current.scrollTo(nextPage);
       setCurrentPage(nextPage);
     }
-};
+  };
 
   useEffect(() => {
-  const handleScroll = (e) => {
-    if (currentPage === 2) return; // Disable scrolling on page 3
+    const handleScroll = (e) => {
+      if (currentPage === 2) return; // Disable scrolling on page 3
 
-    if (e.deltaY > 0) {
-      // Scroll down
-      if (currentPage < 5) {
-        setCurrentPage((prevPage) => {
-          const nextPage = prevPage + 1;
-          ref.current.scrollTo(nextPage);
-          return nextPage;
-        });
+      if (e.deltaY > 0) {
+        // Scroll down
+        if (currentPage < 5) {
+          setCurrentPage((prevPage) => {
+            const nextPage = prevPage + 1;
+            ref.current.scrollTo(nextPage);
+            return nextPage;
+          });
+        }
+      } else {
+        // Scroll up
+        if (currentPage > 0) {
+          setCurrentPage((prevPage) => {
+            const nextPage = prevPage - 1;
+            ref.current.scrollTo(nextPage);
+            return nextPage;
+          });
+        }
       }
-    } else {
-      // Scroll up
-      if (currentPage > 0) {
-        setCurrentPage((prevPage) => {
-          const nextPage = prevPage - 1;
-          ref.current.scrollTo(nextPage);
-          return nextPage;
-        });
+    };
+
+    const handleTouchStart = (e) => {
+      setTouchStartY(e.touches[0].clientY);
+    };
+
+    const handleTouchEnd = (e) => {
+      if (currentPage === 2) return; // Disable scrolling on page 3
+
+      const touchEndY = e.changedTouches[0].clientY;
+      if (touchStartY - touchEndY > 50) {
+        // Swipe up
+        if (currentPage < 5) {
+          setCurrentPage((prevPage) => {
+            const nextPage = prevPage + 1;
+            ref.current.scrollTo(nextPage);
+            return nextPage;
+          });
+        }
+      } else if (touchEndY - touchStartY > 50) {
+        // Swipe down
+        if (currentPage > 0) {
+          setCurrentPage((prevPage) => {
+            const nextPage = prevPage - 1;
+            ref.current.scrollTo(nextPage);
+            return nextPage;
+          });
+        }
       }
-    }
-  };
+    };
+    
+    window.addEventListener("wheel", handleScroll);
+    window.addEventListener("touchstart", handleTouchStart);
+    window.addEventListener("touchend", handleTouchEnd);
 
-  const handleTouchStart = (e) => {
-    setTouchStartY(e.touches[0].clientY);
-  };
-
-  const handleTouchEnd = (e) => {
-    if (currentPage === 2) return; // Disable scrolling on page 3
-
-    const touchEndY = e.changedTouches[0].clientY;
-    if (touchStartY - touchEndY > 50) {
-      // Swipe up
-      if (currentPage < 5) {
-        setCurrentPage((prevPage) => {
-          const nextPage = prevPage + 1;
-          ref.current.scrollTo(nextPage);
-          return nextPage;
-        });
-      }
-    } else if (touchEndY - touchStartY > 50) {
-      // Swipe down
-      if (currentPage > 0) {
-        setCurrentPage((prevPage) => {
-          const nextPage = prevPage - 1;
-          ref.current.scrollTo(nextPage);
-          return nextPage;
-        });
-      }
-    }
-  };
-
-  window.addEventListener("wheel", handleScroll);
-  window.addEventListener("touchstart", handleTouchStart);
-  window.addEventListener("touchend", handleTouchEnd);
-
-  return () => {
-    window.removeEventListener("wheel", handleScroll);
-    window.removeEventListener("touchstart", handleTouchStart);
-    window.removeEventListener("touchend", handleTouchEnd);
-  };
-}, [currentPage, touchStartY]);
+    return () => {
+      window.removeEventListener("wheel", handleScroll);
+      window.removeEventListener("touchstart", handleTouchStart);
+      window.removeEventListener("touchend", handleTouchEnd);
+    };
+  }, [currentPage, touchStartY]);
 
   return (
     <div className={`overflow-x-hidden  ${show ? "" : "hidden"} `}>
-      <Parallax pages={6} ref={ref} config={{ mass: 1, tension: 40, friction: 10 }}>
+      <Parallax
+        pages={6}
+        ref={ref}
+        config={{ mass: 1, tension: 40, friction: 10 }}
+      >
         <ParallaxLayer
           sticky={{ start: 0, end: 5 }}
           style={{ zIndex: 0, width: "10vw", height: "10vh" }}
         >
           <Nav handleNav={handleNav} handleNextScroll={handleNextScroll} />
-          <div onClick={() => setHandleNav(!handleNav)}>
+          <div className="" onClick={() => setHandleNav(!handleNav)}>
             <button onClick={handleNextScroll1}>
               {currentPage != 5 ? (
                 <FontAwesomeIcon
@@ -125,7 +133,7 @@ export const Portfolio = ({ show, setHandleNav, handleNav }) => {
             </button>
           </div>
         </ParallaxLayer>
-        <ParallaxLayer  sticky={{ start: 0, end: 5 }} style={{ zIndex: -2 }}>
+        <ParallaxLayer sticky={{ start: 0, end: 5 }} style={{ zIndex: -2 }}>
           <div>
             <video
               className="absolute -z-10 left-[0vw] top-[0vh] backdrop-filter backdrop-blur-3xl video "
@@ -147,6 +155,10 @@ export const Portfolio = ({ show, setHandleNav, handleNav }) => {
           {/* <Nav handleNav={handleNav} /> */}
           {/* <div onClick={() => setHandleNav(!handleNav)}> */}
           <About />
+          <Canvas>
+          <ambientLight intensity={1} color={"white"} position={[0, 10, 0]} />
+          <Astro1 currentPage={currentPage} position={[0, 1.8, -4]} rotation={[0.6, 0, 0]} />
+          </Canvas>
           {/* </div> */}
         </ParallaxLayer>
         <ParallaxLayer offset={2} speed={1}>
@@ -159,6 +171,10 @@ export const Portfolio = ({ show, setHandleNav, handleNav }) => {
           {/* <Nav handleNav={handleNav} /> */}
           {/* <div onClick={() => setHandleNav(!handleNav)}> */}
           <Contact />
+          <Canvas style={{position: "absolute"}}>
+          <ambientLight intensity={1} color={"white"} position={[0, 10, 0]} />
+          <Rocket position={[0, 3, 0]} rotation={[0.5, -0.4, -0.2]}  scale={0.0023}/>
+          </Canvas>
           <Footer />
           {/* </div> */}
         </ParallaxLayer>

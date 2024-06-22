@@ -40,17 +40,17 @@ export const NumberAsigner = () => {
 
   const playerData = (e) => {
     e.preventDefault();
-    setID((prevValue) => prevValue + 1);
-    const jugador = {
-      ID: ID,
-      nombre: e.target.nombre.value,
-    };
-    setPlayer((player) => {
-      return [...player, jugador];
-    });
-    const nombrecin = e.target.nombre.value;
-    setNombre((nombre) => [...nombre, nombrecin]);
 
+    const participantArray = e.target.nombre.value.trim().split(/\s+/);
+    const newPlayers = participantArray.map((element, index) => {
+      return {
+        ID: ID + index,
+        nombre: element,
+      };
+    });
+
+    setPlayer((prevPlayers) => [...prevPlayers, ...newPlayers]);
+    setNombre((prevNombres) => [...prevNombres, ...participantArray]);
     e.target.reset();
   };
   // LOGICA PARA ANIMACION DE COLORES
@@ -81,7 +81,6 @@ export const NumberAsigner = () => {
       const matchIndex = (index + 1) % shuffledPlayers.length;
       const match = shuffledPlayers[matchIndex];
       newAssignments[match.nombre] = array[numberIndex];
-
     });
     setText("Emparejando...");
     setAssignments(newAssignments);
@@ -92,11 +91,7 @@ export const NumberAsigner = () => {
       setStop(false);
     }, 3000);
     return () => clearTimeout(time);
-   
   };
-
-  
-
 
   return (
     <>
