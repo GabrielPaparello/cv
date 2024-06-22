@@ -15,6 +15,7 @@ import { ProjectSection } from "./sections/ProjectSection";
 import { Contact } from "./sections/Contact";
 import { Footer } from "./sections/Footer";
 import { Suspense } from "react";
+
 export const Portfolio = ({ setHandleNav, handleNav }) => {
   const [currentPage, setCurrentPage] = useState(0);
   const [touchStartY, setTouchStartY] = useState(null);
