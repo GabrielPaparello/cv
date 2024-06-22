@@ -97,7 +97,7 @@ export const Portfolio = ({ show, setHandleNav, handleNav }) => {
 
   return (
     <div className={`overflow-x-hidden  ${show ? "" : "hidden"} `}>
-      <Parallax pages={6} ref={ref}>
+      <Parallax pages={6} ref={ref} config={{ mass: 1, tension: 40, friction: 10 }}>
         <ParallaxLayer
           sticky={{ start: 0, end: 5 }}
           style={{ zIndex: 0, width: "10vw", height: "10vh" }}
@@ -121,7 +121,7 @@ export const Portfolio = ({ show, setHandleNav, handleNav }) => {
             </button>
           </div>
         </ParallaxLayer>
-        <ParallaxLayer sticky={{ start: 0, end: 5 }} style={{ zIndex: -2 }}>
+        <ParallaxLayer  sticky={{ start: 0, end: 5 }} style={{ zIndex: -2 }}>
           <div>
             <video
               className="absolute -z-10 left-[0vw] top-[0vh] backdrop-filter backdrop-blur-3xl video "
