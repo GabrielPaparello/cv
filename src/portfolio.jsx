@@ -59,43 +59,43 @@ export const Portfolio = ({ setHandleNav, handleNav }) => {
       }
     };
 
-    // const handleTouchStart = (e) => {
-    //   setTouchStartY(e.touches[0].clientY);
-    // };
+    const handleTouchStart = (e) => {
+      setTouchStartY(e.touches[0].clientY);
+    };
 
-    // const handleTouchEnd = (e) => {
-    //   if (currentPage === 2) return; // Disable scrolling on page 3
+    const handleTouchEnd = (e) => {
+      if (currentPage === 2) return; // Disable scrolling on page 3
 
-    //   const touchEndY = e.changedTouches[0].clientY;
-    //   if (touchStartY - touchEndY > 50) {
-    //     // Swipe up
-    //     if (currentPage < 5) {
-    //       setCurrentPage((prevPage) => {
-    //         const nextPage = prevPage + 1;
-    //         ref.current.scrollTo(nextPage);
-    //         return nextPage;
-    //       });
-    //     }
-    //   } else if (touchEndY - touchStartY > 50) {
-    //     // Swipe down
-    //     if (currentPage > 0) {
-    //       setCurrentPage((prevPage) => {
-    //         const nextPage = prevPage - 1;
-    //         ref.current.scrollTo(nextPage);
-    //         return nextPage;
-    //       });
-    //     }
-    //   }
-    // };
+      const touchEndY = e.changedTouches[0].clientY;
+      if (touchStartY - touchEndY > 50) {
+        // Swipe up
+        if (currentPage < 5) {
+          setCurrentPage((prevPage) => {
+            const nextPage = prevPage + 1;
+            ref.current.scrollTo(nextPage);
+            return nextPage;
+          });
+        }
+      } else if (touchEndY - touchStartY > 50) {
+        // Swipe down
+        if (currentPage > 0) {
+          setCurrentPage((prevPage) => {
+            const nextPage = prevPage - 1;
+            ref.current.scrollTo(nextPage);
+            return nextPage;
+          });
+        }
+      }
+    };
 
     window.addEventListener("wheel", handleScroll);
-    // window.addEventListener("touchstart", handleTouchStart);
-    // window.addEventListener("touchend", handleTouchEnd);
+    window.addEventListener("touchstart", handleTouchStart);
+    window.addEventListener("touchend", handleTouchEnd);
 
     return () => {
       window.removeEventListener("wheel", handleScroll);
-      // window.removeEventListener("touchstart", handleTouchStart);
-      // window.removeEventListener("touchend", handleTouchEnd);
+      window.removeEventListener("touchstart", handleTouchStart);
+      window.removeEventListener("touchend", handleTouchEnd);
     };
   }, [currentPage, touchStartY]);
 
