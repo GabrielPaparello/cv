@@ -105,7 +105,7 @@ export const Portfolio = ({ show, setHandleNav, handleNav }) => {
           <Nav handleNav={handleNav} handleNextScroll={handleNextScroll} />
           <div onClick={() => setHandleNav(!handleNav)}>
             <button onClick={handleNextScroll1}>
-              {currentPage != 4 ? (
+              {currentPage != 5 ? (
                 <FontAwesomeIcon
                   icon={faArrowAltCircleDown}
                   size="4x"
