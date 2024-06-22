@@ -7,13 +7,16 @@ import { Contact } from "./sections/Contact";
 import { Footer } from "./sections/Footer";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import video from "./assets/bgVideo.mp4";
-import { useEffect, useRef, useState } from "react";
+import { Children, useEffect, useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowAltCircleDown } from "@fortawesome/free-regular-svg-icons";
 import { faArrowAltCircleUp } from "@fortawesome/free-solid-svg-icons";
 import { Canvas } from "@react-three/fiber";
 import { Astro1 } from "./models/Astro1";
 import { Rocket } from "./models/Rocket";
+import { Satelite } from "./models/Satelite";
+import { Float } from "@react-three/drei";
+// import { useSpring,animated } from "@react-spring/web";
 
 export const Portfolio = ({ show, setHandleNav, handleNav }) => {
   const [currentPage, setCurrentPage] = useState(0);
@@ -25,7 +28,20 @@ export const Portfolio = ({ show, setHandleNav, handleNav }) => {
       setCurrentPage(a);
     }
   };
-
+  //   const satelite = () =>{ useSpring({
+  //   from: { position: [0, 2, 0] },
+  //   to: { position: [0, 3, 0] },
+  //   config: { duration: 1000 },
+  // })
+//   const Satelite2 = () => {
+//     const { position } = useSpring({
+//       from: { position: [0, 2, 0] },
+//       to: { position: [0, 3, 0] },
+//       config: { duration: 1000 },
+    
+//   });
+//   return (<animated.group position={position}>{Children}</animated.group>)
+// };
   const handleNextScroll1 = () => {
     if (currentPage == 2) {
       const nextPage = (currentPage + 3) % 6;
@@ -105,15 +121,18 @@ export const Portfolio = ({ show, setHandleNav, handleNav }) => {
 
   return (
     <div className={`overflow-x-hidden  ${show ? "" : "hidden"} `}>
+      
       <Parallax
         pages={6}
         ref={ref}
         config={{ mass: 1, tension: 40, friction: 10 }}
       >
+        
         <ParallaxLayer
           sticky={{ start: 0, end: 5 }}
           style={{ zIndex: 0, width: "10vw", height: "10vh" }}
         >
+          
           <Nav handleNav={handleNav} handleNextScroll={handleNextScroll} />
           <div className="" onClick={() => setHandleNav(!handleNav)}>
             <button onClick={handleNextScroll1}>
@@ -133,6 +152,19 @@ export const Portfolio = ({ show, setHandleNav, handleNav }) => {
             </button>
           </div>
         </ParallaxLayer>
+        <ParallaxLayer offset={0} style={{position: "absolute", zIndex: -1}}>
+          <Canvas>
+            <ambientLight intensity={1} color={"white"} position={[0, 10, 0]} />
+            <Float speed={1.5} rotationIntensity={1} floatIntensity={2}>
+              {/* <Satelite2> */}
+              <Satelite position={[0, 2, 0]} rotation={[2, 2, 0]}
+                scale={[0.09, 0.09, 0.09]} />
+
+              {/* </Satelite2> */}
+              {/* <Satelite /> */}
+            </Float>
+          </Canvas>
+        </ParallaxLayer>
         <ParallaxLayer sticky={{ start: 0, end: 5 }} style={{ zIndex: -2 }}>
           <div>
             <video
@@ -143,6 +175,7 @@ export const Portfolio = ({ show, setHandleNav, handleNav }) => {
             >
               <source src={video} type="video/mp4" />
             </video>
+            
           </div>
         </ParallaxLayer>
         <ParallaxLayer offset={0} factor={1} speed={1} style={{ zIndex: 0 }}>
@@ -171,13 +204,14 @@ export const Portfolio = ({ show, setHandleNav, handleNav }) => {
           {/* <Nav handleNav={handleNav} /> */}
           {/* <div onClick={() => setHandleNav(!handleNav)}> */}
           <Contact />
-          <Canvas style={{position: "absolute"}}>
+          <Canvas style={{position: "absolute" }}>
           <ambientLight intensity={1} color={"white"} position={[0, 10, 0]} />
           <Rocket position={[0, 3, 0]} rotation={[0.5, -0.4, -0.2]}  scale={0.0023}/>
           </Canvas>
           <Footer />
           {/* </div> */}
         </ParallaxLayer>
+        
       </Parallax>
       {/* <Nav handleNav={handleNav} />
         <div onClick={() => setHandleNav(!handleNav)}> 
