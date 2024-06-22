@@ -35,65 +35,69 @@ export const Portfolio = ({ show, setHandleNav, handleNav }) => {
 };
 
   useEffect(() => {
-    const handleScroll = (e) => {
-      if (e.deltaY > 0) {
-        // Scroll down
-        if (currentPage < 2) {
-          setCurrentPage((prevPage) => {
-            const nextPage = prevPage + 1;
-            ref.current.scrollTo(nextPage);
-            return nextPage;
-          });
-        }
-      } else {
-        // Scroll up
-        if (currentPage > 0 && currentPage != 2) {
-          setCurrentPage((prevPage) => {
-            const nextPage = prevPage - 1;
-            ref.current.scrollTo(nextPage);
-            return nextPage;
-          });
-        }
+  const handleScroll = (e) => {
+    if (currentPage === 2) return; // Disable scrolling on page 3
+
+    if (e.deltaY > 0) {
+      // Scroll down
+      if (currentPage < 5) {
+        setCurrentPage((prevPage) => {
+          const nextPage = prevPage + 1;
+          ref.current.scrollTo(nextPage);
+          return nextPage;
+        });
       }
-    };
-
-    const handleTouchStart = (e) => {
-      setTouchStartY(e.touches[0].clientY);
-    };
-
-    const handleTouchEnd = (e) => {
-      const touchEndY = e.changedTouches[0].clientY;
-      if (touchStartY - touchEndY > 50) {
-        // Swipe up
-        if (currentPage < 2 && currentPage != 2) {
-          setCurrentPage((prevPage) => {
-            const nextPage = prevPage + 1;
-            ref.current.scrollTo(nextPage);
-            return nextPage;
-          });
-        }
-      } else if (touchEndY - touchStartY > 50) {
-        // Swipe down
-        if (currentPage > 0 && currentPage != 2) {
-          setCurrentPage((prevPage) => {
-            const nextPage = prevPage - 1;
-            ref.current.scrollTo(nextPage);
-            return nextPage;
-          });
-        }
+    } else {
+      // Scroll up
+      if (currentPage > 0) {
+        setCurrentPage((prevPage) => {
+          const nextPage = prevPage - 1;
+          ref.current.scrollTo(nextPage);
+          return nextPage;
+        });
       }
-    };
+    }
+  };
 
-    window.addEventListener("wheel", handleScroll);
-    window.addEventListener("touchstart", handleTouchStart);
-    window.addEventListener("touchend", handleTouchEnd);
+  const handleTouchStart = (e) => {
+    setTouchStartY(e.touches[0].clientY);
+  };
 
-    return () => {
-      window.removeEventListener("wheel", handleScroll);
-      window.removeEventListener("touchstart", handleTouchStart);
-      window.removeEventListener("touchend", handleTouchEnd);
-    };
-  }, [currentPage, touchStartY]);
+  const handleTouchEnd = (e) => {
+    if (currentPage === 2) return; // Disable scrolling on page 3
+
+    const touchEndY = e.changedTouches[0].clientY;
+    if (touchStartY - touchEndY > 50) {
+      // Swipe up
+      if (currentPage < 5) {
+        setCurrentPage((prevPage) => {
+          const nextPage = prevPage + 1;
+          ref.current.scrollTo(nextPage);
+          return nextPage;
+        });
+      }
+    } else if (touchEndY - touchStartY > 50) {
+      // Swipe down
+      if (currentPage > 0) {
+        setCurrentPage((prevPage) => {
+          const nextPage = prevPage - 1;
+          ref.current.scrollTo(nextPage);
+          return nextPage;
+        });
+      }
+    }
+  };
+
+  window.addEventListener("wheel", handleScroll);
+  window.addEventListener("touchstart", handleTouchStart);
+  window.addEventListener("touchend", handleTouchEnd);
+
+  return () => {
+    window.removeEventListener("wheel", handleScroll);
+    window.removeEventListener("touchstart", handleTouchStart);
+    window.removeEventListener("touchend", handleTouchEnd);
+  };
+}, [currentPage, touchStartY]);
 
   return (
     <div className={`overflow-x-hidden  ${show ? "" : "hidden"} `}>
