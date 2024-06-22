@@ -46,7 +46,7 @@ export const Header = ({handleNextScroll}) => {
           </button>
           </LinkScroll>
           <LinkScroll to='Contact' smooth={true} duration={500}>
-          <button onClick={() => handleNextScroll(4)} className="bg-[#0d588a] border-2 border-[#45b5ff] px-4 py-2 rounded-lg m-4 hover:scale-110 hover:font-bold duration-300">
+          <button onClick={() => handleNextScroll(5)} className="bg-[#0d588a] border-2 border-[#45b5ff] px-4 py-2 rounded-lg m-4 hover:scale-110 hover:font-bold duration-300">
             Contact Me
           </button>
           </LinkScroll>
