@@ -16,7 +16,6 @@ export function Rocket(props) {
   const { actions } = useAnimations(animations, group)
   
   useEffect(() => {
-    console.log(actions['Take 001']);
     actions['Take 001'].play()
     
   }, [])

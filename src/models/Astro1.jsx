@@ -30,13 +30,13 @@ export function Astro1(props) {
 
   useEffect(() => {
     
-    if (props.currentPage) {
+    
       actions.wave.play()
-      actions.wave.fadeOut(6)
+      actions.wave.fadeOut(10)
       actions.floating.play()
-    }
+    
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [props.currentPage])
+  }, [])
 
   return (
     <group ref={group} {...props} dispose={null}>

@@ -1,11 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
+import  { useEffect, useRef, useState } from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import video from "./assets/bgVideo.mp4";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowAltCircleDown, faArrowAltCircleUp } from "@fortawesome/free-solid-svg-icons";
 import { Canvas } from "@react-three/fiber";
-import { Astro1 } from "./models/Astro1";
-import { Rocket } from "./models/Rocket";
+
 import { Satelite } from "./models/Satelite";
 import { Float } from "@react-three/drei";
 import { Nav } from "./components/Nav";
@@ -15,6 +14,9 @@ import { ProjectSection } from "./sections/ProjectSection";
 import { Contact } from "./sections/Contact";
 import { Footer } from "./sections/Footer";
 import { Suspense } from "react";
+import RocketRender from "./components/RocketRender";
+import AstroRender from "./components/AstroRender";
+import SateliteRender from "./components/SateliteRender";
 
 export const Portfolio = ({ setHandleNav, handleNav }) => {
   const [currentPage, setCurrentPage] = useState(0);
@@ -115,14 +117,7 @@ export const Portfolio = ({ setHandleNav, handleNav }) => {
           </div>
         </ParallaxLayer>
         <ParallaxLayer offset={0} style={{ position: "absolute", zIndex: -1 }}>
-          <Canvas>
-            <Suspense fallback={null}>
-              <ambientLight intensity={1} color={"white"} position={[0, 10, 0]} />
-              <Float speed={1.5} rotationIntensity={1} floatIntensity={2}>
-                <Satelite position={[0, 2, 0]} rotation={[2, 2, 0]} scale={[0.09, 0.09, 0.09]} />
-              </Float>
-            </Suspense>
-          </Canvas>
+          <SateliteRender />
         </ParallaxLayer>
         <ParallaxLayer sticky={{ start: 0, end: 5 }} style={{ zIndex: -2 }}>
           <video className="absolute -z-10 left-[0vw] top-[0vh] backdrop-filter backdrop-blur-3xl video" loop autoPlay muted>
@@ -134,20 +129,14 @@ export const Portfolio = ({ setHandleNav, handleNav }) => {
         </ParallaxLayer>
         <ParallaxLayer offset={1} factor={1} speed={1}>
           <About />
-          <Canvas>
-            <ambientLight intensity={1} color={"white"} position={[0, 10, 0]} />
-            <Astro1 currentPage={currentPage} position={[0, 1.8, -4]} rotation={[0.6, 0, 0]} />
-          </Canvas>
+          <AstroRender />
         </ParallaxLayer>
         <ParallaxLayer offset={2} speed={1}>
           <ProjectSection />
         </ParallaxLayer>
         <ParallaxLayer offset={5} factor={1} speed={1}>
           <Contact />
-          <Canvas style={{ position: "absolute" }}>
-            <ambientLight intensity={1} color={"white"} position={[0, 10, 0]} />
-            <Rocket position={[0, 3, 0]} rotation={[0.5, -0.4, -0.2]} scale={0.0023} />
-          </Canvas>
+          <RocketRender />
           <Footer />
         </ParallaxLayer>
       </Parallax>
