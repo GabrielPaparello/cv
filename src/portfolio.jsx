@@ -1,22 +1,17 @@
-import  { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import video from "./assets/bgVideo.mp4";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowAltCircleDown, faArrowAltCircleUp } from "@fortawesome/free-solid-svg-icons";
-import { Canvas } from "@react-three/fiber";
-
-import { Satelite } from "./models/Satelite";
-import { Float } from "@react-three/drei";
+import {
+  faArrowAltCircleDown,
+  faArrowAltCircleUp,
+} from "@fortawesome/free-solid-svg-icons";
 import { Nav } from "./components/Nav";
 import { Header } from "./sections/Header";
 import { About } from "./sections/About";
 import { ProjectSection } from "./sections/ProjectSection";
 import { Contact } from "./sections/Contact";
 import { Footer } from "./sections/Footer";
-import { Suspense } from "react";
-import RocketRender from "./components/RocketRender";
-import AstroRender from "./components/AstroRender";
-import SateliteRender from "./components/SateliteRender";
 
 export const Portfolio = ({ setHandleNav, handleNav }) => {
   const [currentPage, setCurrentPage] = useState(0);
@@ -31,7 +26,8 @@ export const Portfolio = ({ setHandleNav, handleNav }) => {
   };
 
   const handleNextScroll1 = () => {
-    const nextPage = (currentPage === 2) ? (currentPage + 3) % 6 : (currentPage + 1) % 6;
+    const nextPage =
+      currentPage === 2 ? (currentPage + 3) % 6 : (currentPage + 1) % 6;
     ref.current.scrollTo(nextPage);
     setCurrentPage(nextPage);
   };
@@ -103,24 +99,39 @@ export const Portfolio = ({ setHandleNav, handleNav }) => {
 
   return (
     <div className="overflow-x-hidden">
-      <Parallax pages={6} ref={ref} config={{ mass: 1, tension: 40, friction: 10 }}>
-        <ParallaxLayer sticky={{ start: 0, end: 5 }} style={{ zIndex: 0, width: "10vw", height: "10vh" }}>
+      <Parallax
+        pages={6}
+        ref={ref}
+        config={{ mass: 1, tension: 40, friction: 10 }}
+      >
+        <ParallaxLayer
+          sticky={{ start: 0, end: 5 }}
+          style={{ zIndex: 0, width: "10vw", height: "10vh" }}
+        >
           <Nav handleNav={handleNav} handleNextScroll={handleNextScroll} />
           <div onClick={() => setHandleNav(!handleNav)}>
             <button onClick={handleNextScroll1}>
               <FontAwesomeIcon
-                icon={currentPage !== 5 ? faArrowAltCircleDown : faArrowAltCircleUp}
+                icon={
+                  currentPage !== 5 ? faArrowAltCircleDown : faArrowAltCircleUp
+                }
                 size="4x"
                 className="relative top-[85vh] left-[42vw] text-white cursor-pointer"
               />
             </button>
           </div>
         </ParallaxLayer>
-        <ParallaxLayer offset={0} style={{ position: "absolute", zIndex: -1 }}>
-          {/* <SateliteRender /> */}
-        </ParallaxLayer>
+        <ParallaxLayer
+          offset={0}
+          style={{ position: "absolute", zIndex: -1 }}
+        ></ParallaxLayer>
         <ParallaxLayer sticky={{ start: 0, end: 5 }} style={{ zIndex: -2 }}>
-          <video className="absolute -z-10 left-[0vw] top-[0vh] backdrop-filter backdrop-blur-3xl video" loop autoPlay muted>
+          <video
+            className="absolute -z-10 left-[0vw] top-[0vh] backdrop-filter backdrop-blur-3xl video"
+            loop
+            autoPlay
+            muted
+          >
             <source src={video} type="video/mp4" />
           </video>
         </ParallaxLayer>
@@ -129,14 +140,12 @@ export const Portfolio = ({ setHandleNav, handleNav }) => {
         </ParallaxLayer>
         <ParallaxLayer offset={1} factor={1} speed={1}>
           <About />
-          <AstroRender />
         </ParallaxLayer>
         <ParallaxLayer offset={2} speed={1}>
           <ProjectSection />
         </ParallaxLayer>
         <ParallaxLayer offset={5} factor={1} speed={1}>
           <Contact />
-          <RocketRender />
           <Footer />
         </ParallaxLayer>
       </Parallax>
