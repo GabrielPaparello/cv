@@ -1,15 +1,4 @@
-import animationData from "../assets/Animation.json";
-import { Link as LinkScroll } from "react-scroll";
-export const Header = ({ handleNextScroll }) => {
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
-
+export const Header = () => {
   return (
     <>
       <div
@@ -31,22 +20,12 @@ export const Header = ({ handleNextScroll }) => {
           problems
         </h2>
         <div className="m-2 md:text-center text-xl ">
-          <LinkScroll to="Projects" smooth={true} duration={500}>
-            <button
-              onClick={() => handleNextScroll(2)}
-              className="border-2 hover:scale-110 duration-300 border-[#45b5ff] text-[#45b5ff] px-4 py-2 mt-10 md:mt-0 rounded-lg"
-            >
-              See my Work
-            </button>
-          </LinkScroll>
-          <LinkScroll to="Contact" smooth={true} duration={500}>
-            <button
-              onClick={() => handleNextScroll(5)}
-              className="bg-[#0d588a] border-2 border-[#45b5ff] px-4 py-2 rounded-lg m-4 hover:scale-110 hover:font-bold duration-300"
-            >
-              Contact Me
-            </button>
-          </LinkScroll>
+          <button className="border-2 hover:scale-110 duration-300 border-[#45b5ff] text-[#45b5ff] px-4 py-2 mt-10 md:mt-0 rounded-lg">
+            See my Work
+          </button>
+          <button className="bg-[#0d588a] border-2 border-[#45b5ff] px-4 py-2 rounded-lg m-4 hover:scale-110 hover:font-bold duration-300">
+            Contact Me
+          </button>
         </div>
       </div>
     </>

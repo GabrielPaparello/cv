@@ -6,7 +6,14 @@ import { ProjectSection } from "./sections/ProjectSection";
 import { Contact } from "./sections/Contact";
 import { Footer } from "./sections/Footer";
 
-export const Portfolio = ({ setHandleNav, handleNav }) => {
+interface portfolioProps {
+  setHandleNav: React.Dispatch<React.SetStateAction<boolean>>;
+  handleNav: boolean;
+}
+
+
+
+export const Portfolio = ({ setHandleNav, handleNav } : portfolioProps ) => {
   return (
     <div className="overflow-x-hidden">
       <Nav handleNav={handleNav} />

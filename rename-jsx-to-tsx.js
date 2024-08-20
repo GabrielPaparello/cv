@@ -1,44 +1,29 @@
-const fs = require("fs");
-const path = require("path");
+import fs from "fs/promises";
+import path from "path";
 
-function renameJsxToTsx(dir) {
-  // Read the directory contents
-  fs.readdir(dir, (err, files) => {
-    if (err) {
-      console.error(`Error reading directory ${dir}:`, err);
-      return;
-    }
+async function renameJsxToTsx(dir) {
+  try {
+    // Read the directory contents
+    const files = await fs.readdir(dir);
 
-    files.forEach((file) => {
+    // Process each file or directory
+    for (const file of files) {
       const filePath = path.join(dir, file);
+      const stats = await fs.stat(filePath);
 
-      fs.stat(filePath, (err, stats) => {
-        if (err) {
-          console.error(`Error stating file ${filePath}:`, err);
-          return;
-        }
-
-        if (stats.isDirectory()) {
-          // Recursively process subdirectories
-          renameJsxToTsx(filePath);
-        } else if (stats.isFile() && file.endsWith(".jsx")) {
-          // Rename .jsx files to .tsx
-          const newFilePath = filePath.replace(/\.jsx$/, ".tsx");
-
-          fs.rename(filePath, newFilePath, (err) => {
-            if (err) {
-              console.error(
-                `Error renaming file ${filePath} to ${newFilePath}:`,
-                err
-              );
-            } else {
-              console.log(`Renamed ${filePath} to ${newFilePath}`);
-            }
-          });
-        }
-      });
-    });
-  });
+      if (stats.isDirectory()) {
+        // Recursively process subdirectories
+        await renameJsxToTsx(filePath);
+      } else if (stats.isFile() && file.endsWith(".jsx")) {
+        // Rename .jsx files to .tsx
+        const newFilePath = filePath.replace(/\.jsx$/, ".tsx");
+        await fs.rename(filePath, newFilePath);
+        console.log(`Renamed ${filePath} to ${newFilePath}`);
+      }
+    }
+  } catch (err) {
+    console.error(`Error processing directory ${dir}:`, err);
+  }
 }
 
 // Start renaming from the current directory
