@@ -58,7 +58,7 @@ export function Nav({ handleNav }: { handleNav: boolean }) {
           onClick={() => {
             setOpen(!open);
           }}
-          className={`text-3xl fixed top-2 z-10 bg-[#0D1321]  p-1 rounded-lg text-white cursor-pointer md:text-5xl  duration-500 ${
+          className={`text-xl fixed top-2 z-10 bg-[#0D1321]  p-1 rounded-lg text-white cursor-pointer   duration-500 ${
             !open ? "" : "invisible"
           }`}
         />
