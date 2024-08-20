@@ -4,7 +4,6 @@ import project12 from "../assets/project12.png";
 import project3 from "../assets/project3.png";
 import project4 from "../assets/project4.png";
 import animationData from "../assets/animation3.json";
-import Lottie from "react-lottie";
 import "../App.css";
 export const ProjectSection = () => {
   const defaultOptions = {

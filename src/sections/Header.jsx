@@ -1,4 +1,3 @@
-import Lottie from "react-lottie";
 import animationData from "../assets/Animation.json";
 import { Link as LinkScroll } from "react-scroll";
 export const Header = ({ handleNextScroll }) => {
