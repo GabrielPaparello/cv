@@ -1,33 +1,51 @@
+import video from "../assets/bgVideo.mp4";
+
 export const Header = () => {
   return (
     <>
-      <div
-        id="HOME"
-        className="text-center md:text-start m-2 p-2 md:p-0  items-center  flex flex-col mt-[200px]  text-white mb-[200px]  "
-      >
-        <div className="flex md:flex-row  md:gap-[100px] flex-col items-center ">
-          <div className="playfair md:mt-0 ">
-            <h1 className="text-3xl md:text-8xl  m-2">Gabriel</h1>
-            <h2 className="text-2xl md:text-6xl  m-2 pb-4">
-              {" "}
-              Front End <span className="text-[#6b4de5]">Developer</span>
-            </h2>
+      <header className="flex flex-col text-white text-center relative py-[200px] px-8 ">
+        <section>
+          <video
+            autoPlay
+            muted
+            loop
+            className="absolute  inset-0 object-cover w-full h-full"
+          >
+            <source src={video} type="video/mp4" />
+          </video>
+          <span className="absolute inset-0 bg-gradient-to-b from-transparent  to-black/50" />
+        </section>
+        <section className="relative flex text-start  justify-evenly items-center ">
+          <article className="flex flex-col">
+            <h3 className="text-lg ">Welcome I am</h3>
+            <h1 className="text-3xl md:text-5xl  m-2">
+              Gabriel
+              <span className="text-[#6b4de5]/90 "> Front End Developer</span>
+            </h1>
+            <p className="  text-xl md:text-start roboto tracking-wide text-wrap max-w-[400px] md:max-w-[600px] text-white p-5 ">
+              I specialize in creating{" "}
+              <span className="text-[#45b5ff]">Solutions</span> for modern
+              problems trough web development. <br />
+              Passionate about technology and the way things work as im
+              constanly <span className="text-[#45b5ff]">Seeking</span> new
+              challenges and learning new technologies
+            </p>
+          </article>
+          <div className="rounded-xl bg-blue-500 w-[400px]  h-[400px]">
+            ACA VA LA FOTO
           </div>
-        </div>
-
-        <h2 className="text-xl md:text-center roboto tracking-wide text-white pt-2 md:pt-[100px]">
-          Creating <span className="text-[#45b5ff]">Solutions</span> for modern
-          problems
-        </h2>
-        <div className="m-2 md:text-center text-xl ">
-          <button className="border-2 hover:scale-110 duration-300 border-[#45b5ff] text-[#45b5ff] px-4 py-2 mt-10 md:mt-0 rounded-lg">
-            See my Work
-          </button>
-          <button className="bg-[#0d588a] border-2 border-[#45b5ff] px-4 py-2 rounded-lg m-4 hover:scale-110 hover:font-bold duration-300">
-            Contact Me
-          </button>
-        </div>
-      </div>
+        </section>
+        <section className="flex flex-col relative pt-5">
+          <article className="">
+            <button className="border-2 hover:scale-110 duration-300 border-[#45b5ff] text-[#45b5ff] px-4 py-2 mt-10 md:mt-0 rounded-lg">
+              See my Work
+            </button>
+            <button className="bg-[#0d588a] border-2 border-[#45b5ff] px-4 py-2 rounded-lg m-4 hover:scale-110 hover:font-bold duration-300">
+              Contact Me
+            </button>
+          </article>
+        </section>
+      </header>
     </>
   );
 };
