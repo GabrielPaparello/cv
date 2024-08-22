@@ -1,13 +1,16 @@
-import { Nav } from "./../../components/Nav";
+import { FormEventHandler } from 'react';
+import { Nav } from '../../../components/nav/Nav'
 
-export const Modal = ({ modalForm }) => {
+type modalProps = {modalForm:FormEventHandler}
+
+export const Modal = ({ modalForm }:modalProps) => {
   return (
     <>
       <Nav />
       <div className="-mt-4 xs:h-screen  w-full  flex flex-col items-center">
         <div className=" px-10  flex flex-col items-center">
           <h1 className="text-2xl md:text-4xl font-sans font-bold text-white tracking-wide text-center pt-10 ">
-            Amigo Invisible
+            Asignador de puestos
           </h1>
         </div>
         <div className="m-10  px-6 py-7  md:w-96 blackModalBg rounded-3xl">
@@ -15,22 +18,11 @@ export const Modal = ({ modalForm }) => {
             onSubmit={modalForm}
             className="formSettings flex flex-col justify-center text-center items-center "
           >
-            <h2 className="text-lg md:text-2xl text-start text-nowrap -mb-4 font-sans font-semibold text-white tracking-wider ">
-              ¿Quien Organiza el evento...?
-            </h2>
-            <textarea
-              className="mt-7 mb-5  text-sm  text-start  font-bold border-2 shadow-md shadow-black  rounded-md "
-              type="text"
-              name="from"
-              placeholder="   Empresa, Sector, Organizacion ... que organiza el evento."
-              cols="26"
-              rows="2"
-            />
             <h2 className="text-lg mt-5 md:text-2xl md:mt-0   text-nowrap font-sans font-semibold text-white tracking-wider ">
               ¿Cuantos participan?
             </h2>
             <input
-              className="mt-4 h-7 text-center w-52 md:w-56 border-2 font-bold text-sm md:text-md shadow-md shadow-black rounded-md "
+              className="mt-4 h-7 text-center w-52 md:w-56 font-bold border-2 text-xs md:text-md shadow-md shadow-black rounded-md "
               type="number"
               name="cantidad"
               required
@@ -40,13 +32,13 @@ export const Modal = ({ modalForm }) => {
               Inserte cantidad de jugadores
             </h3>
             <h2 className="text-lg md:text-2xl text-start text-nowrap -mb-4 font-sans font-semibold text-white tracking-wider ">
-              Reglas para los jugadores
+              ¿Cuantos puestos hay?
             </h2>
-            <textarea
-              className="mt-7  text-sm  text-start  font-bold border-2 shadow-md shadow-black  rounded-md "
-              type="text"
+            <input
+              className="mt-7  text-xs  text-center resize-none font-bold border-2 shadow-md shadow-black  rounded-md "
+              type="number"
               name="rules"
-              placeholder="   Inserte las reglas"
+              placeholder="   Vuelta de 2 ... 3??"
               cols="26"
               rows="2"
             />

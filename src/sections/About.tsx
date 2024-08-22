@@ -1,6 +1,9 @@
-export const About = () => {
+export const About = ({ id }: { id: string }) => {
   return (
-    <div id="ABOUT" className="flex flex-col m-2 md:flex-row md:mt-[200px] justify-center gap-10 ">
+    <div
+      id={id}
+      className="flex flex-col m-2 md:flex-row md:mt-[200px] justify-center gap-10 "
+    >
       <div className="text-white flex flex-col items-center  mt-10 text-start   ">
         <section className=" text-wrap text-start max-w-[400px] ">
           <h2 className="text-2xl md:text-5xl roboto text-[#45b5ff] m-2">

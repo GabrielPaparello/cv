@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
-import { Modal } from "./modal";
-import { PlayerData } from "./PlayerData";
-import PlayerRender from "./PlayerRender";
-import "./InvisibleFriend.css";
-import "./utils.css";
-import { Nav } from "../../../components/Nav";
+import { useEffect, useState } from 'react'
+import { Modal } from './modal'
+import { PlayerData } from './PlayerData'
+import PlayerRender from './PlayerRender'
+import './InvisibleFriend.css'
+import './utils.css'
+import { Nav } from '../../../components/nav/Nav'
 export const NumberAsigner = () => {
   // CANTIDAD DE JUGADORES
   const [cantidad, setCantidad] = useState();
