@@ -5,7 +5,7 @@ import project3 from "../assets/project3.png";
 import project4 from "../assets/project4.png";
 import animationData from "../assets/animation3.json";
 import "../App.css";
-export const ProjectSection = () => {
+export const ProjectSection = ({ id }: { id: string }) => {
   const defaultOptions = {
     loop: 2,
     autoplay: true,
@@ -15,7 +15,10 @@ export const ProjectSection = () => {
     },
   };
   return (
-    <div className=" mt-[100px] flex flex-col justify-center align-middle items-center">
+    <div
+      id={id}
+      className=" mt-[100px] flex flex-col justify-center align-middle items-center"
+    >
       <div className="bg-black bg-opacity-50 rounded-full w-[300px] h-[300px] md:w-[500px] md:h-[500px]">
         <h2 className="text-4xl md:text-7xl roboto text-center    text-[#45b5ff]  tracking-wider ">
           Projects

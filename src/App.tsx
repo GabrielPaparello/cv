@@ -1,14 +1,21 @@
-import { Portfolio } from "./portfolio";
-import { useState } from "react";
-
+import { Nav } from './components/nav/Nav'
+import { Header } from './sections/Header'
+import { About } from './sections/About'
+import { ProjectSection } from './sections/ProjectSection'
+import { Contact } from './sections/Contact'
+import { Footer } from './sections/Footer'
+import { NavToggleProvider } from './lib/context/NavToggleProvider'
 export const App = () => {
-  // THIS WAS MY FIX TO MAKE THE NAV CLOSE
-  // CLICKING ON THE BACKGROUND
-  const [handleNav, setHandleNav] = useState(false);
-
   return (
     <>
-      <Portfolio setHandleNav={setHandleNav} handleNav={handleNav} />
+      <NavToggleProvider>
+        <Nav />
+        <Header id='Header' />
+        <About id='about' />
+        <ProjectSection id='projects' />
+        <Contact id='contact' />
+        <Footer />
+      </NavToggleProvider>
     </>
   );
 };

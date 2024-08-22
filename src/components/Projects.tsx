@@ -4,6 +4,17 @@ import { useState } from "react";
 import { faJs } from "@fortawesome/free-brands-svg-icons/faJs";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+
+interface ProjectProps {
+  projectName: string;
+  projectImg: string;
+  ProjectDescription: string;
+  ProjectTechnologies: string;
+  ProjectLink: string;
+  ProjectGit?: string;
+  ProjectDisabled?: boolean;
+}
+
 export const Projects = ({
   projectName,
   projectImg,
@@ -12,7 +23,7 @@ export const Projects = ({
   ProjectLink,
   ProjectGit,
   ProjectDisabled,
-}) => {
+}: ProjectProps) => {
   const [active, setActive] = useState(false);
   return (
     <>
@@ -30,13 +41,13 @@ export const Projects = ({
           {projectName}
         </h2>
         <div className="h-[430px] flex justify-center  w-[350px] ">
-        <img
-          className={`backFace  shadow-xl shadow-[#0D1321] rounded-2xl block  max-w-[100%]  h-[430px] object-fill  duration-[1.5s]  ${
-            active ? "rotation3d" : ""
-          } `}
-          src={projectImg}
-          alt="fotografía de proyecto"
-        />
+          <img
+            className={`backFace  shadow-xl shadow-[#0D1321] rounded-2xl block  max-w-[100%]  h-[430px] object-fill  duration-[1.5s]  ${
+              active ? "rotation3d" : ""
+            } `}
+            src={projectImg}
+            alt="fotografía de proyecto"
+          />
         </div>
         <div
           className={`backFace  ${
@@ -82,7 +93,10 @@ export const Projects = ({
                     : ` border-[#6b4de5] text-[#45b5ff]`
                 } my-16 m-4 border-2   w-32 h-16 rounded-lg font-bold  text-lg`}
               >
-                <a href={ProjectGit} className={`hover:underline-offset-8 hover: hover:underline`}>
+                <a
+                  href={ProjectGit}
+                  className={`hover:underline-offset-8 hover: hover:underline`}
+                >
                   {" "}
                   View code{" "}
                 </a>

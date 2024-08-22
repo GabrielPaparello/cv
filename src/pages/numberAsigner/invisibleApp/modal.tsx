@@ -1,6 +1,9 @@
-import { Nav } from "../../../components/Nav";
+import { FormEventHandler } from 'react';
+import { Nav } from '../../../components/nav/Nav'
 
-export const Modal = ({ modalForm }) => {
+type modalProps = {modalForm:FormEventHandler}
+
+export const Modal = ({ modalForm }:modalProps) => {
   return (
     <>
       <Nav />

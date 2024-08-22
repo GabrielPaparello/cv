@@ -1,18 +1,18 @@
-import { useEffect, useState } from "react";
-import { Modal } from './modal.jsx';
-import { PlayerData } from "./PlayerData";
-import PlayerRender from "./PlayerRender";
-import "./InvisibleFriend.css";
-import { Nav } from '../../components/Nav';
-import "./utils.css";
-import emailjs from "@emailjs/browser";
+import { useEffect, useState } from 'react'
+import { Modal } from './modal.jsx'
+import { PlayerData } from './PlayerData'
+import PlayerRender from './PlayerRender'
+import './InvisibleFriend.css'
+import { Nav } from '../../components/nav/Nav'
+import './utils.css'
+import emailjs from '@emailjs/browser'
 export const InvisibleFriend = () => {
   // CANTIDAD DE JUGADORES
-  const [cantidad, setCantidad] = useState();
+  const [cantidad, setCantidad] = useState()
   // REGLAS DE JUGADORES
-  const [rules, setRules] = useState("");
+  const [rules, setRules] = useState('')
   // QUIEN ORGANIZA EL EVENTO
-  const [organizer, setOrganizer] = useState("");
+  const [organizer, setOrganizer] = useState('')
 
   // REFACTORIZAR
   let [player, setPlayer] = useState([]);
@@ -27,8 +27,8 @@ export const InvisibleFriend = () => {
   const [assignments, setAssignments] = useState({});
 
   // LOGICA PARA ANIMACION DE COLORES
-  const [text, setText] = useState("Click para emparejar");
-  const [color, setColor] = useState("yellowBg");
+  const [text, setText] = useState('Click para emparejar');
+  const [color, setColor] = useState('yellowBg');
   const [stop, setStop] = useState(false);
 
   // User_Input Asigna cantidad de jugadores.
@@ -60,7 +60,7 @@ export const InvisibleFriend = () => {
   };
   // LOGICA PARA ANIMACION DE COLORES
 
-  const colors = ["animation1 text-white", "animation2 text-black"];
+  const colors = ['animation1 text-white', 'animation2 text-black'];
   let index = 0;
 
   // simula Carga ==> animacion de emparejamiento
@@ -85,7 +85,7 @@ export const InvisibleFriend = () => {
       const match = shuffledPlayers[matchIndex];
       newAssignments[element.nombre] = match.nombre;
     });
-    setText("Emparejando...");
+    setText('Emparejando...');
     setAssignments(newAssignments);
     setStop(true);
 
@@ -101,51 +101,51 @@ export const InvisibleFriend = () => {
 
   useEffect(() => {
     emailjs.init({
-      publicKey: "6DQJxnCew0qoEVF6r",
+      publicKey: '6DQJxnCew0qoEVF6r',
     });
     player.map((element) => {
-      if (element.email.toLowerCase().includes("@gmail.com")) {
-        emailjs.send("service_v4znwzs", "template_gb0wibc", {
-          from_name: "Amigo Invisible",
+      if (element.email.toLowerCase().includes('@gmail.com')) {
+        emailjs.send('service_v4znwzs', 'template_gb0wibc', {
+          from_name: 'Amigo Invisible',
           from_organizer: organizer,
           to_name: element.nombre,
           message:
-            "Estas Son las reglas que " +
-            " " +
+            'Estas Son las reglas que ' +
+            ' ' +
             organizer +
-            " " +
-            "eligio para que sigas:" +
-            " " +
+            ' ' +
+            'eligio para que sigas:' +
+            ' ' +
             rules +
-            " ",
+            ' ',
           asignado:
             element.nombre +
-            " tu amigo invisible es " +
+            ' tu amigo invisible es ' +
             assignments[element.nombre],
           to_email: element.email,
         });
       } else if (
-        element.email.toLowerCase().includes("@outlook.com") ||
-        element.email.toLowerCase().includes("@hotmail.com") ||
-        element.email.toLowerCase().includes("@live.com") ||
-        element.email.toLowerCase().includes("@outlook.es")
+        element.email.toLowerCase().includes('@outlook.com') ||
+        element.email.toLowerCase().includes('@hotmail.com') ||
+        element.email.toLowerCase().includes('@live.com') ||
+        element.email.toLowerCase().includes('@outlook.es')
       ) {
-        emailjs.send("service_7bg3xeu", "template_gb0wibc", {
-          from_name: "Amigo Invisible",
+        emailjs.send('service_7bg3xeu', 'template_gb0wibc', {
+          from_name: 'Amigo Invisible',
           from_organizer: organizer,
           to_name: element.nombre,
           message:
-            "Estas Son las reglas que " +
-            " " +
+            'Estas Son las reglas que ' +
+            ' ' +
             organizer +
-            " " +
-            "eligio para que sigas:" +
-            " " +
+            ' ' +
+            'eligio para que sigas:' +
+            ' ' +
             rules +
-            " ",
+            ' ',
           asignado:
             element.nombre +
-            " tu amigo invisible es " +
+            ' tu amigo invisible es ' +
             assignments[element.nombre],
           to_email: element.email,
         });
@@ -167,7 +167,7 @@ export const InvisibleFriend = () => {
       </div>
 
       {/* Formulario de Usar Data */}
-      <div className="flex flex-col items-center">
+      <div className='flex flex-col items-center'>
         <div
           className={` w-80   order-1 mt-5 duration-1000${
             cantidad ? ` scale-100` : `hidden scale-0`
