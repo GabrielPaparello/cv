@@ -6,16 +6,16 @@ import { Contact } from './sections/Contact'
 import { Footer } from './sections/Footer'
 import { NavToggleProvider } from './lib/context/NavToggleProvider'
 export const App = () => {
-  return (
-    <>
-      <NavToggleProvider>
-        <Nav />
-        <Header id='Header' />
-        <About id='about' />
-        <ProjectSection id='projects' />
-        <Contact id='contact' />
-        <Footer />
-      </NavToggleProvider>
-    </>
-  );
-};
+	return (
+		<>
+			<NavToggleProvider>
+				<Nav />
+				<Header id="Header" />
+				<ProjectSection id="projects" />
+				<About id="about" />
+				<Contact id="contact" />
+				<Footer />
+			</NavToggleProvider>
+		</>
+	)
+}
