@@ -8,6 +8,7 @@ import tateti from "../../assets/projects/tateti.png";
 import tatetiMobile from "../../assets/projects/tatetiMobile.png";
 import emparejar from "../../assets/project12.png";
 import emparejarMobile from "../../assets/project12.png";
+import mycv from "../../assets/projects/mycv.png";
 import ReduxIcon from "../icons/redux";
 import React from "react";
 import NextJs from "../icons/next";
@@ -19,6 +20,7 @@ import Tailwind from "../icons/Tailwind";
 import TsIcon from "../icons/Ts";
 import Mui from "../icons/Mui";
 import Css from "../icons/Css";
+import Vite from "../icons/vite";
 type IconComponent = React.ComponentType;
 interface project {
   ProjectName?: string;
@@ -40,11 +42,11 @@ const data: projectsType = [
     ProjectImg: trelloProject,
     ProjectMobileImg: trelloMobileProject,
     ProjectDescription:
-      "This project is inspired on Trello , but is just a portfolio piece , it consists of a KanbanBoard with the ability to create an account or log in with a service to save and create projects and boards with data, the web is structured as a sofware presenting trello functionalities and product",
+      "This project is inspired on Trello , but is just a portfolio piece , it consists of a KanbanBoard with the ability to create an account or log in with a service gaining access to save and create projects and boards with data, the web is structured as a sofware presenting trello functionalities as a product",
     ProjectTechnologies:
       "For this project i used: Nextjs for the flexibility it provides with the folder structure and api routes deploy on vercel and postgresql for the database , i decided to use redux for the logic and Auth0 for the log in and registration",
-    ProjectLink: "https://trello-clone-seven.vercel.app/",
-    ProjectGit: "https://github.com/GabrielPaparello/TrelloClone",
+    ProjectLink: "https://trello-clon-seven.vercel.app",
+    ProjectGit: "https://github.com/GabrielPaparello/TrelloClon",
     ProjectIcons: [
       ReduxIcon,
       NextJs,
@@ -55,6 +57,18 @@ const data: projectsType = [
       Tailwind,
       TsIcon,
     ],
+  },
+  {
+    ProjectName: "My portfolio",
+    ProjectImg: mycv,
+    ProjectMobileImg: mycv,
+    ProjectDescription:
+      "This portfolio is always behind as time moves fordward and i keep learning about ux ui and about technologies i have to come back to update so be advised 😂",
+    ProjectTechnologies:
+      "For this portfolio i used react with typescript tailwind for the styles in previous versions i where using 3d with threejs but decided to drop it as i dont have experience with render for creating my self the models so i take them from the internet not achieving the best design , im using vite as this page just needs to be a SPA.",
+    ProjectLink: "https://ghapzhportfolio.netlify.app",
+    ProjectGit: "https://github.com/GabrielPaparello/cv",
+    ProjectIcons: [JsIcon, GitIcon, ReactIcon, Tailwind, TsIcon, Vite],
   },
   {
     ProjectName: "Secret Santa",
