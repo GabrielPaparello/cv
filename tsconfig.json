@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "types": ["vite/client"],
+    "target": "esnext",
+  
+    "module": "esnext",
+    "moduleResolution": "node",
+    "jsx": "react-jsx", // Use "react" for older versions of React
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@components/*": ["src/components/*"],
+      "@utils/*": ["src/utils/*"],
+      "@assets/*": ["src/assets/*"],
+      "@lib/*": ["src/lib/*"]
+    }
+  },
+  "include": ["src"]
+}

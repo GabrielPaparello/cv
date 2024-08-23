@@ -1,26 +1,23 @@
 body {
-    background-color: #0D1321;
+	background-color: #0d1321;
 }
-
 
 button a {
-    cursor: pointer;
+	cursor: pointer;
 }
 
-.backFace{
-    backface-visibility: hidden;
+.backFace {
+	backface-visibility: hidden;
 }
 
 .rotation3d {
-    transform: perspective(600px) rotateY(-180deg);
-    
+	transform: perspective(600px) rotateY(-180deg);
 }
 .rotationBack3d {
-    transform: perspective(600px) rotateY(180deg);
-    
+	transform: perspective(600px) rotateY(180deg);
 }
 
-.roboto-thin {
+/* .roboto-thin {
   font-family: "Roboto", sans-serif;
   font-weight: 100;
   font-style: normal;
@@ -34,20 +31,20 @@ button a {
 }
 
 .roboto {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-}
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+} 
 
-nav {
+
+
+/* nav {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-style: normal;
-}
+} */
 
 .video {
-  
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
