@@ -26,7 +26,7 @@ export const Header = ({ id }: HeaderProps) => {
         </section>
         <section className="relative flex lg:flex-row flex-col md:order-1 gap-5 m-5   text-start  justify-evenly items-center ">
           <article className=" flex flex-col order-2 bg-gray-700/25 p-5 rounded-2xl     ">
-            <span className="ring-gray-700/60 ring-1 p-7 rounded-xl">
+            <span className="ring-gray-700/60 ring-1 md:p-7 p-3 rounded-xl">
               <h3 className="text-lg md:-ml-4 -ml-2 mb-3 tracking-wider italic  ">
                 Welcome I am
               </h3>
