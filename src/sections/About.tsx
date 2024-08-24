@@ -2,8 +2,8 @@ import "@/App.css";
 export const About = ({ id }: { id: string }) => {
   return (
     <>
-      <section className="flex flex-col  mt-5 md:mt-10  bg-[#e3f2fd]  justify-center m-auto  items-center ">
-        <section className="text-body m-2 p-5 md:max-w-[80%]  flex items-center justify-center">
+      <section className="flex flex-col  mt-5 md:mt-10  bg-[#e3f2fd]  justify-center   items-center ">
+        <section className="text-body m-2 p-5 md:max-w-[60%]  flex items-center justify-center">
           <article className="text-wrap text-start font-body ">
             <h2
               id={id}
@@ -29,11 +29,11 @@ export const About = ({ id }: { id: string }) => {
             </p>
           </article>
         </section>
-        <section className="text-body m-2 p-5 md:max-w-[80%]  flex items-center justify-center">
+        {/* <section className="text-body m-2 p-5 md:max-w-[80%]  flex items-center justify-center">
           <article className="text-wrap text-start font-body ">
             <h3
               id={id}
-              className="text-3xl text-subtitle text-start italic font-semibold    mt-8 mb-5 font-title"
+              className="text-3xl text-subtitle text-start italic font-semibold     mt-8 mb-5 font-title"
             >
               Technologies
             </h3>
@@ -43,23 +43,27 @@ export const About = ({ id }: { id: string }) => {
               applications. I am proficient in:
             </h3>
             <ul className="list-disc   ">
-              <li className="font-semibold">
+              <li className="font-semibold text-subtitle ">
                 HTML, CSS, JavaScript, TypeScript:{" "}
               </li>
               <p className="text-base  pb-2 ">
                 Core technologies for creating and styling web content.
               </p>
-              <li className="font-semibold">React, Next.js, and Redux: </li>
+              <li className="font-semibold text-subtitle">
+                React, Next.js, and Redux:{" "}
+              </li>
               <p className="text-base  pb-2 ">
                 For building interactive user interfaces and managing
                 application state.
               </p>
-              <li className="font-semibold">Tailwind CSS and Material UI: </li>
+              <li className="font-semibold text-subtitle">
+                Tailwind CSS and Material UI:{" "}
+              </li>
               <p className="text-base  pb-2 ">
                 For designing and implementing aesthetically pleasing and
                 responsive layouts.
               </p>
-              <li className="font-semibold">Git and GitHub: </li>
+              <li className="font-semibold text-subtitle">Git and GitHub: </li>
               <p className="text-base  pb-2 ">
                 For version control and collaboration.
               </p>
@@ -71,7 +75,7 @@ export const About = ({ id }: { id: string }) => {
               to real-world projects.
             </p>
           </article>
-        </section>
+        </section> */}
       </section>
     </>
   );
