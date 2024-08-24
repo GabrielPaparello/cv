@@ -26,7 +26,7 @@ export const Header = ({ id }: HeaderProps) => {
           <span className="absolute  inset-0 bg-gradient-to-b from-transparent via-transparent to-[#0d1321]" />
         </section>
         <section className="relative flex lg:flex-row flex-col md:order-1 gap-5 m-5   text-start  justify-evenly items-center ">
-          <article className=" flex flex-col order-2 bg-gray-700/25 p-5 rounded-2xl     ">
+          <article className=" flex flex-col order-2 bg-gray-700/25 p-4 rounded-2xl     ">
             <span className="ring-gray-700/60 ring-1 md:p-7 p-3 rounded-xl">
               <h3 className="text-lg md:-ml-4 -ml-2 mb-3 tracking-wider italic  ">
                 Welcome I am
