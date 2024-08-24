@@ -14,7 +14,7 @@ export const ProjectSection = ({ id }: { id: string }) => {
         </span>
       </h2>
       <section className="flex flex-col gap-16 md:gap-24">
-        {projectData.map((project, index) => (
+        {projectData.map((project) => (
           <Projects
             key={project.ProjectName}
             ProjectName={project.ProjectName}
