@@ -20,7 +20,7 @@ export const Projects = ({
   let { windowsWidth } = useContext(NavToggleContext);
   return (
     <>
-      <section className="flex flex-col md:flex-row m-5 gap-8 p-5 text-center bg-gray-800/25 shadow-sm shadow-gray-700 rounded-lg  text-gray-200 justify-center align-middle items-center  ">
+      <section className="flex flex-col md:flex-row m-5 gap-8 p-5 text-center bg-gray-700/25 shadow-sm shadow-gray-600 rounded-lg  text-gray-200 justify-center align-middle items-center  ">
         <article className="self-center">
           <img
             className="w-[450px] md:w-[600px] rounded-xl  h-auto md:h-[700px] object-contain "

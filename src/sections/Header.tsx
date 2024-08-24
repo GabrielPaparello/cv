@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import video from "../assets/bgVideo.mp4";
 import logo from "../assets/logo/ghapzh.png";
+import { Link } from "react-scroll";
 
 type HeaderProps = {
   id: string;
@@ -43,12 +44,22 @@ export const Header = ({ id }: HeaderProps) => {
                 challenges and learning new technologies
               </p>
               <article className="text-end">
-                <button className=" font-title duration-100 tracking-wider text-lg   text-[#45b5ff]/60 px-4 py-2 mt-4 md:mt-0  hover:text-[#45b5ff]/30">
+                <Link
+                  className=" font-title cursor-pointer duration-100 tracking-wider text-lg   text-[#45b5ff]/60 px-4 py-2 mt-4 md:mt-0  hover:text-[#45b5ff]/30"
+                  duration={500}
+                  smooth
+                  to={"projects"}
+                >
                   My Work
-                </button>
-                <button className="bg-[#0d588a]/30 border-2  border-[#45b5ff] px-3 py-1 rounded-lg mx-4  hover:bg-[#0d588a]/60 font-title  tracking-wider text-lg  duration-100">
+                </Link>
+                <Link
+                  className="bg-[#0d588a]/30 cursor-pointer border-2  border-[#45b5ff] px-3 py-1 rounded-lg mx-4  hover:bg-[#0d588a]/60 font-title  tracking-wider text-lg  duration-100"
+                  duration={500}
+                  smooth
+                  to={"contact"}
+                >
                   Contact Me
-                </button>
+                </Link>
               </article>
             </span>
           </article>
