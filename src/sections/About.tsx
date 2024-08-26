@@ -1,5 +1,6 @@
 import "@/App.css";
 import BookNegativeDivider from "@/components/shapeDividers/Book.Negative.Divider";
+import React from "react";
 import BookDivider from "@/components/shapeDividers/Book.divider";
 export const About = ({ id }: { id: string }) => {
   return (
@@ -15,7 +16,7 @@ export const About = ({ id }: { id: string }) => {
               Who Am I
             </h2>
             <p className="text-lg  md:text-xl my-4 pb-2 first-letter:text-2xl first-letter:font-semibold first-letter-dancing">
-              Hi, I'm Gabriel, a passionate Junior Front-End Developer from
+              Hi, Im Gabriel, a passionate Junior Front-End Developer from
               Buenos Aires, Argentina.
               <br /> While I currently work in customer service, my true passion
               lies in web development. I spend every spare moment exploring new
@@ -28,7 +29,7 @@ export const About = ({ id }: { id: string }) => {
             md:text-xl
             first-letter:text-2xl first-letter:font-semibold first-letter-dancing  "
             >
-              With a strong enthusiasm for front-end development, I'm eager to
+              With a strong enthusiasm for front-end development, Im eager to
               dive into professional opportunities where I can contribute my
               skills and continue growing. I see myself as a dedicated,
               communicative individual who thrives on solving problems and
