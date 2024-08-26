@@ -25,10 +25,10 @@ Desarrollé un portafolio web para un amigo que está iniciando su carrera en la
 
 - **Bootcamp de Python** - Universidad Nacional de San Martín (UNSAM), Buenos Aires
 - **Introducción al Desarrollo Front-End** - Universidad Tecnológica Nacional (UTN), Buenos Aires
-- **Certificación en HTML y CSS** - Udemy
+- **Certificación en HTML y CSS** - Universidad Tecnológica Nacional (UTN), Buenos Aires
 - **Certificación de Desarrollador Profesional** - Digital House (en curso)
 - **Bootcamp de Desarrollo Front-End** - Digital House (en curso)
-- **Certificación de Desarrollador Back-End** (en espera para especialización futura)
+- **Certificación de Desarrollador Back-End** (en espera para especialización futura) Digital House
 
 ## 💼 Experiencia
 
@@ -38,6 +38,6 @@ Actualmente no cuento con experiencia profesional en front-end, pero he desarrol
 
 Puedes ponerte en contacto conmigo a través de los siguientes enlaces:
 
-- [LinkedIn](#) (próximamente)
+- [LinkedIn](www.linkedin.com/in/gabriel-paparello) (próximamente)
 - [Twitter](#) (próximamente)
 - [Correo Electrónico](#) (próximamente)
