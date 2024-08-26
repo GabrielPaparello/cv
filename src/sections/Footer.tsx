@@ -6,7 +6,7 @@ export const Footer = () => {
   return (
     <section className="bg-[#1a1e2b] ">
       <section className="flex  mt-20 pt-5   justify-evenly items-center ">
-        <ul className="flex flex-col  justify-center items-start   text-md  md:text-lg text-gray-500/70">
+        <ul className="flex flex-col  justify-center items-start   text-sm  md:text-base text-gray-500/70">
           {columnData.map((footerLinks) => (
             <li className="hover:text-gray-400" key={footerLinks.link}>
               <FontAwesomeIcon icon={footerLinks.icon} className="mr-2" />
@@ -15,7 +15,7 @@ export const Footer = () => {
           ))}
         </ul>
 
-        <ul className="flex flex-col justify-center items-start  text-sm md:text-lg  text-gray-500/70 ">
+        <ul className="flex flex-col justify-center items-start  text-sm md:text-base  text-gray-500/70 ">
           {columnTwoData.map((footerLinks) => (
             <li className="hover:text-gray-400" key={footerLinks.link}>
               <FontAwesomeIcon icon={footerLinks.icon} className="mr-2" />
