@@ -1,3 +1,4 @@
+import React from "react";
 import { Projects } from "../components/Projects";
 import projectData from "../components/project/data";
 import "../App.css";
