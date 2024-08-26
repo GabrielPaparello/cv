@@ -1,8 +1,7 @@
-import { useContext } from "react";
 import video from "../assets/bgVideo.mp4";
 import logo from "../assets/logo/ghapzh.png";
 import { Link } from "react-scroll";
-
+import React from "react";
 type HeaderProps = {
   id: string;
 };
