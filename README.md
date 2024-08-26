@@ -38,6 +38,8 @@ Actualmente no cuento con experiencia profesional en front-end, pero he desarrol
 
 Puedes ponerte en contacto conmigo a través de los siguientes enlaces:
 
-- [LinkedIn](www.linkedin.com/in/gabriel-paparello) (próximamente)
+- [LinkedIn](www.linkedin.com/in/gabriel-paparello) (www.linkedin.com/in/gabriel-paparello
+
+)
 - [Twitter](#) (próximamente)
 - [Correo Electrónico](#) (próximamente)
