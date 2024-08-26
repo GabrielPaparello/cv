@@ -45,23 +45,23 @@ export const Contact: React.FC<ContactProps> = ({ id }) => {
         onSubmit={sendEmail}
         ref={form}
         id="Contact"
-        className="flex flex-col w-[350px] bg-[#252b37] p-7 rounded-2xl text-sm shadow-lg shadow-black justify-center align-middle gap-2 mb-10"
+        className="flex flex-col min-w-[350px]  md:min-w-[500px] font-body bg-[#252b37] p-7 rounded-2xl text-sm shadow-lg shadow-black justify-center align-middle gap-2 "
       >
-        <h2 className="text-3xl font-serif text-white text-center mb-3">
+        <h2 className="text-3xl font-title text-white text-center mb-5">
           Contact Me
         </h2>
-        <label className="text-white" htmlFor="Name">
+        <label className="text-white text-lg" htmlFor="Name">
           Name
         </label>
         <input
           type="text"
           required
           name="Name"
-          placeholder="Your Name"
-          className="p-2 rounded-xl bg-gray-200"
+          placeholder="Jhon Doe/ Jane Doe"
+          className="p-2 rounded-md bg-gray-200"
         />
 
-        <label className="text-white text-xl" htmlFor="Subject">
+        <label className="text-white text-lg" htmlFor="Subject">
           Subject
         </label>
         <input
@@ -69,31 +69,31 @@ export const Contact: React.FC<ContactProps> = ({ id }) => {
           required
           name="Subject"
           placeholder="Subject"
-          className="p-2 rounded-xl bg-gray-200"
+          className="p-2 rounded-md bg-gray-200"
         />
 
-        <label className="text-white" htmlFor="Email">
+        <label className="text-white text-lg" htmlFor="Email">
           Email
         </label>
         <input
           type="text"
           required
           name="Email"
-          placeholder="Email"
-          className="p-2 rounded-xl bg-gray-200"
+          placeholder="yourEmail@com"
+          className="p-2 rounded-md bg-gray-200"
         />
 
-        <label className="text-white" htmlFor="Message">
+        <label className="text-white text-lg" htmlFor="Message">
           Message
         </label>
         <textarea
           required
           name="Message"
-          placeholder="Message"
-          className="p-2 rounded-xl text-start bg-gray-200"
+          placeholder="Insert here your message..."
+          className="p-2 rounded-md mb-2 text-start bg-gray-200"
         />
         <button
-          className="ml-[50px] bg-black border-2 border-[#45b5ff] text-white font-bold text-md hover:bg-[#45b5ff] hover:text-black w-[200px] p-2 rounded-xl"
+          className="bg-[#0d588a]/30 cursor-pointer border-2  border-[#45b5ff]/20 px-3 py-1 rounded-lg   hover:bg-[#0d588a]/60 font-title  tracking-wider text-lg text-white duration-100"
           type="submit"
         >
           Enviar
